@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이근재 · 환경안전(EHS) · ESG · SHE 이력서</title>
+
+  <!-- ▼ SEO 메타태그 -->
+  <meta name="description" content="환경·안전(EHS) 데이터를 신뢰할 수 있게 만드는 사람 — ESG · SHE · EHS 직무 이력서 및 포트폴리오." />
+  <meta name="author" content="이근재" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="이근재 · 환경안전(EHS) · ESG · SHE 이력서" />
+  <meta property="og:description" content="환경 인허가 · EHS 점검 · 데이터 교차검증 실무 경력. ESG · SHE · EHS 직무 지원." />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 건너뛰기 링크(접근성) -->
+  <a href="#about" class="skip-link" data-i18n="ko">본문 바로가기</a>
+  <a href="#about" class="skip-link" data-i18n="en" hidden>Skip to content</a>
+
+  <!-- ====================== 상단 고정 헤더 ====================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="주 내비게이션">
+      <a href="#hero" class="nav__brand" id="nav-brand"></a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#history"><span class="ko">연혁</span><span class="en" hidden>Timeline</span></a></li>
+        <li><a href="#self-intro"><span class="ko">자기소개</span><span class="en" hidden>About Me</span></a></li>
+        <li class="nav__projects-li" hidden><a href="#projects"><span class="ko">프로젝트</span><span class="en" hidden>Projects</span></a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <!-- 언어 토글 -->
+        <button type="button" id="lang-toggle" class="btn btn--ghost" aria-pressed="false" title="한국어 / English">
+          <span class="ko">EN</span><span class="en" hidden>KO</span>
+        </button>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <!-- ====================== Hero ====================== -->
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow" id="hero-subtitle"></p>
+          <h1 class="hero__name" id="hero-name"></h1>
+          <p class="hero__headline" id="hero-headline"></p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn btn--accent">
+              <span class="ko">연락하기</span><span class="en" hidden>Get in touch</span>
+            </a>
+            <button type="button" class="btn btn--ghost" id="print-btn">
+              <span class="ko">🖨️ PDF로 저장</span><span class="en" hidden>🖨️ Save as PDF</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero__photo" id="hero-photo" hidden>
+          <img id="hero-photo-img" alt="프로필 사진" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== About (메인 페이지) ====================== -->
+    <section id="about" class="page-block">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">소개</span><span class="en" hidden>About</span></h2>
+        </div>
+        <p class="about__text" id="about-text"></p>
+      </div>
+    </section>
+
+    <!-- ====================== Certifications & Skills (메인 페이지) ====================== -->
+    <section id="skills" class="page-block page-block--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">자격증 &amp; 역량</span><span class="en" hidden>Certifications &amp; Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div>
+            <h3 class="subhead"><span class="ko">자격증</span><span class="en" hidden>Certifications</span></h3>
+            <ul class="chips" id="cert-list"></ul>
+          </div>
+          <div>
+            <h3 class="subhead"><span class="ko">핵심 역량</span><span class="en" hidden>Core skills</span></h3>
+            <ul class="chips" id="skill-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Contact (메인 페이지) ====================== -->
+    <section id="contact" class="page-block">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">연락처</span><span class="en" hidden>Contact</span></h2>
+        </div>
+        <ul class="contact-list" id="contact-list"></ul>
+      </div>
+    </section>
+
+    <!-- ====================== 자기소개 (탭) ====================== -->
+    <section id="self-intro" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">자기소개</span><span class="en" hidden>About Me</span></h2>
+        </div>
+        <div id="self-intro-content" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ====================== 연혁 (경력 + 학력 통합 탭) ====================== -->
+    <section id="history" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">연혁</span><span class="en" hidden>Timeline</span></h2>
+        </div>
+        <div class="timeline" id="history-list"></div>
+      </div>
+    </section>
+
+    <!-- ====================== Projects (있을 때만) ====================== -->
+    <section id="projects" class="section" hidden>
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">프로젝트</span><span class="en" hidden>Projects</span></h2>
+        </div>
+        <div class="timeline" id="projects-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footer-text"></p>
+    </div>
+  </footer>
+
+
+  <!-- 데이터는 fetch가 아니라 <script src>로 불러와 file:// 에서도 동작 -->
+  <script src="data/site-config.js"></script>
+  <script src="data/resume.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
