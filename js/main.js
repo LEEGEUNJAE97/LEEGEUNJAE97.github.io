@@ -156,10 +156,10 @@
     // 연혁 — 경력 + 학력 통합
     var hist = $("#history-list");
 
-    (DATA.experience || []).forEach(function (job) {
+    function renderJobCard(job, badgeLabel) {
       var card = el("div", "card reveal");
       var badge = el("span", "card__type");
-      bilingual(badge, { ko: "경력", en: "Experience" });
+      bilingual(badge, badgeLabel);
       card.appendChild(badge);
       var top = el("div", "card__top");
       var titleWrap = el("div");
@@ -175,6 +175,14 @@
         card.appendChild(ul);
       }
       hist.appendChild(card);
+    }
+
+    (DATA.experience || []).forEach(function (job) {
+      renderJobCard(job, { ko: "경력", en: "Experience" });
+    });
+
+    (DATA.partTime || []).forEach(function (job) {
+      renderJobCard(job, { ko: "아르바이트", en: "Part-time" });
     });
 
     (DATA.education || []).forEach(function (e) {
@@ -245,6 +253,31 @@
     renderListWithDesc($("#skill-list-tab"), DATA.skills);
     renderChips($("#tool-list"), DATA.tools);
     renderListWithDesc($("#tool-list-tab"), DATA.tools);
+
+    // 교육 및 봉사활동
+    (function () {
+      var al = $("#activities-list");
+      if (!al) return;
+      (DATA.activities || []).forEach(function (a) {
+        var card = el("div", "card reveal");
+        var badge = el("span", "card__type");
+        bilingual(badge, a.kind || { ko: "활동", en: "Activity" });
+        card.appendChild(badge);
+        var top = el("div", "card__top");
+        var wrap = el("div");
+        var h3 = el("h3", "card__title"); bilingual(h3, a.title || {}); wrap.appendChild(h3);
+        if (a.org) { var org = el("div", "card__company"); bilingual(org, a.org); wrap.appendChild(org); }
+        top.appendChild(wrap);
+        if (a.period) top.appendChild(el("span", "card__period", a.period));
+        card.appendChild(top);
+        if (a.highlights && a.highlights.length) {
+          var ul = el("ul", "card__highlights");
+          a.highlights.forEach(function (h) { ul.appendChild(bilingual(el("li"), h)); });
+          card.appendChild(ul);
+        }
+        al.appendChild(card);
+      });
+    })();
 
     // Projects (있을 때만 섹션 노출)
     if (DATA.projects && DATA.projects.length) {
