@@ -9,31 +9,101 @@ window.RESUME_DATA = {
   experience: [
     {
       company: { ko: "이순환거버넌스", en: "E-Soonhwan Governance" },
-      title: { ko: "공제센터 관리팀 선임 (환경오염 · ESG)", en: "Senior, Mutual-Aid Center Management Team (Environmental · ESG)" },
+      note: { ko: "환경부 산하 비영리 공익법인 · 환경성보장제도 운영 공제조합", en: "Non-profit public corporation under MoE · mutual-aid cooperative operating Korea's EPR system" },
+      title: { ko: "공제센터 관리팀 선임 (ESG · 환경)", en: "Senior, Mutual-Aid Center Management Team (ESG · Environmental)" },
       period: "2023.09 – 2026.03 · 2년 7개월",
-      highlights: [
-        { ko: "재활용 사업 회원사 55개사 EHS 현장점검 — 기계·기구·화학물질 취급 실태 집중 점검 및 맞춤형 개선 대책 제시", en: "On-site EHS inspections at 55 recycling member companies — focused on machinery, equipment, and chemical handling with tailored improvement plans" },
-        { ko: "SELF EHS 점검 시스템 운영 및 안전보건 우수 사업장 포상 제도 운영 — 회원사 자발적 안전 활동 참여 유도", en: "Operated the SELF EHS inspection system and best-site recognition program to drive voluntary safety participation" },
-        { ko: "환경성보장제도 의무 대상 품목 확대 이슈 분석 및 회원사 대응 가이드라인 수립·배포 (약 1,400개사)", en: "Analyzed expansion of EPR-covered items and issued response guidelines to ~1,400 member companies" },
-        { ko: "한국환경공단 주관 전국 제도 설명회 단독 연사 10회 (회당 최대 400명) — 신규 가입 310건 달성", en: "Sole speaker at 10 nationwide K-eco briefings (up to 400 per session) — drove 310 new enrollments" },
-        { ko: "약 1,400개 회원사 출고·매입 데이터 취합·분석 및 연 1,000억 원 규모 재활용 분담금 산출·청구·정산 총괄", en: "Compiled shipment/purchase data for ~1,400 members and owned KRW 100B/yr in recycling levy calculation, billing, settlement" },
-        { ko: "엑셀·내부 시스템 연계 3단계 데이터 교차검증 프로세스 자체 설계 — 정산 오차율 0% 달성", en: "Self-designed three-step Excel/system cross-verification — 0% settlement error rate" },
-        { ko: "기후에너지환경부·한국환경공단·감사원 정기 감사 대응 — 외부 감사 데이터 불일치 지적 0건 (2년 7개월 연속)", en: "Handled audits by the Ministry, K-eco, and Board of Audit — zero data-discrepancy findings for 31 straight months" }
+      groups: [
+        {
+          label: { ko: "1. ESG 데이터 관리 및 분담금 운영", en: "1. ESG Data Management & Levy Operations" },
+          duties: [
+            { ko: "약 1,400개 회원사 출고·매입량 데이터 취합·분석 및 법적 신고 사항 관리", en: "Compiled and analyzed shipment/purchase data for ~1,400 member companies; managed statutory reporting" },
+            { ko: "연 1,000억 원 규모 재활용 분담금 산출·청구·정산 총괄", en: "Owned the full KRW 100B/yr recycling levy calculation, billing, and settlement lifecycle" },
+            { ko: "3단계 데이터 교차검증 프로세스 자체 설계", en: "Self-designed a three-step data cross-verification process" },
+            { ko: "기후에너지환경부·한국환경공단·감사원 정기 감사 대응", en: "Handled audits by the Ministry of Climate & Environment, K-eco, and the Board of Audit" }
+          ],
+          results: [
+            { ko: "정산 오차율 0% 달성", en: "0% settlement error rate" },
+            { ko: "재직 기간 내 외부 감사 데이터 불일치 지적 0건 (2년 7개월 연속)", en: "Zero audit data-discrepancy findings for the full tenure (31 consecutive months)" }
+          ]
+        },
+        {
+          label: { ko: "2. 환경 규제 대응 및 이해관계자 소통", en: "2. Environmental Regulation & Stakeholder Communication" },
+          duties: [
+            { ko: "환경성보장제도 의무 대상 품목 확대 이슈 분석 및 회원사 약 1,400개사 대응 가이드라인 수립·배포", en: "Analyzed EPR mandatory-item expansion and issued response guidelines to ~1,400 member companies" },
+            { ko: "한국환경공단 주관 전국 설명회 공제조합 단독 연사 — 기업 담당자 대상 실무 교육 진행", en: "Sole cooperative speaker at K-eco-hosted nationwide briefings — practical training for corporate practitioners" },
+            { ko: "기업 건의사항 수집·정리 후 한국환경공단 전달 및 법 개정 반영", en: "Collected company feedback, relayed to K-eco, and reflected legislative amendments" },
+            { ko: "국회·기후에너지환경부·한국환경공단 대외업무 및 환경 정책·법규 동향 모니터링", en: "Monitored environmental policy and regulatory trends across the National Assembly, Ministry, and K-eco" }
+          ],
+          results: [
+            { ko: "설명회 단독 연사 10회 (회당 약 1,000명) · 반복 문의 건수 가시적 감소", en: "Sole speaker at 10 briefings (~1,000 attendees per session) · measurable reduction in repeat inquiries" },
+            { ko: "회원사 약 1,400개사 대상 가이드라인 배포 및 교육 실시", en: "Guidelines distributed and training delivered to ~1,400 member companies" }
+          ]
+        },
+        {
+          label: { ko: "3. 공급망 EHS 진단 및 안전보건 컨설팅", en: "3. Supply Chain EHS Diagnostics & Safety Consulting" },
+          duties: [
+            { ko: "재활용 사업 회원사 55개사 EHS 컴플라이언스 진단 및 맞춤형 개선 대책 제시", en: "EHS compliance diagnostics for 55 recycling member sites with tailored improvement plans" },
+            { ko: "기후에너지환경부 요청 재활용 사업장 현장 안전점검 수행", en: "Conducted Ministry-requested on-site safety inspections at recycling facilities" },
+            { ko: "SELF EHS 점검 시스템 운영 및 안전보건 우수 사업장 포상 제도 운영", en: "Operated the SELF EHS inspection system and best-site recognition program" }
+          ],
+          results: [
+            { ko: "회원사 55개 사업장 EHS 컴플라이언스 진단 완료", en: "EHS compliance diagnostics completed for all 55 member sites" },
+            { ko: "재활용 사업장 현장 안전점검 및 결과 보고 완료 (기후에너지환경부)", en: "On-site safety inspections completed and results reported to the Ministry of Climate & Environment" }
+          ]
+        }
       ]
     },
     {
       company: { ko: "동희산업 수원지점", en: "Donghee Industry, Suwon" },
-      title: { ko: "노사협력팀 사원 — 환경/안전/보건/총무 (법정 보건관리자)", en: "Associate, Labor-Management Team — EHS/General Affairs (Statutory Health & Safety Manager)" },
+      note: { ko: "현대자동차 1차 협력사 · 차체·부품 제조 · 연매출 2.3조 · 직원 약 4,000명", en: "Tier-1 Hyundai Motor supplier · body & parts manufacturing · KRW 2.3T revenue · ~4,000 employees" },
+      title: { ko: "노사협력팀 매니저 (법정 보건관리자)", en: "Manager, Labor-Management Team (Statutory Health & Safety Manager)" },
       period: "2023.02 – 2023.08 · 7개월",
-      highlights: [
-        { ko: "전국 8개 제조 공장·연구소 보건 업무 본사 통합 관리 (법정 보건관리자)", en: "Centrally managed health & safety for 8 plants/labs nationwide as statutory H&S Manager" },
-        { ko: "취급 화학물질(MSDS) 전수 조사 및 경고표지·교육 자료 현행화 — 화관법 대응 기초 확립", en: "Full MSDS audit and updated labels/training materials — Chemicals Control Act baseline" },
-        { ko: "작업환경측정 및 임직원 특수·일반 건강검진 총괄, 유해인자 노출 저감 조치 실행", en: "Oversaw work-environment monitoring and special/general health checkups with exposure-reduction measures" },
-        { ko: "연구실 안전점검 항목 미실시·미흡 이원화 기준 수립·적용 — 과기정통부 현장점검 과태료 지적 0건", en: "Established 'not-implemented vs incomplete' classification for lab safety — zero penalty findings in MSIT inspection" },
-        { ko: "ISO 14001·45001 기반 전사 환경·안전보건경영시스템 통합 구축, 전국 8개 공장 문서 표준화", en: "Built integrated ISO 14001/45001 EHS system, standardized documentation across 8 plants" },
-        { ko: "본사 Control Tower 역할 — 공장별 소통 채널 운영 및 개선 사례 수평전개 체계 정립", en: "HQ control tower — per-plant channels and horizontal best-practice rollout system" },
-        { ko: "중대재해처벌법 대응 — 법적 의무 이행 점검, 경영진 보고 체계 수립 및 리스크 분석", en: "SAPA compliance — duty checks, executive reporting framework, risk analysis" },
-        { ko: "관리감독자·신규입사자·현장 근로자 대상 법정 의무교육 및 산업안전보건위원회 분기 운영", en: "Statutory training for supervisors/new hires/workers; ran quarterly OSH committee" }
+      groups: [
+        {
+          label: { ko: "1. 전사 환경·안전보건경영시스템 구축", en: "1. Enterprise EHS Management System Build" },
+          duties: [
+            { ko: "ISO 14001·45001 기반 전사 환경·안전보건경영시스템 통합 구축", en: "Built integrated ISO 14001/45001 EHS management system" },
+            { ko: "공장별 문서 표준화 — 양식 차이는 통합, 공정 차이는 예외 항목 분류", en: "Standardized plant documentation — merged format differences, classified genuine process differences as exceptions" },
+            { ko: "본사 Control Tower 역할 — 공장별 소통 채널 운영 및 개선 사례 수평전개 체계 정립", en: "Served as HQ control tower — per-plant communication channels and horizontal best-practice rollout" },
+            { ko: "중대재해처벌법 대응 — 법적 의무 이행 점검, 경영진 보고 체계 수립 및 리스크 분석", en: "SAPA compliance — statutory duty checks, executive reporting framework, and risk analysis" }
+          ],
+          results: [
+            { ko: "전국 8개 공장 ISO 45001 문서 표준화 기준 설계 및 수평전개 채널 구축", en: "ISO 45001 documentation standards designed and horizontal rollout channel established across 8 plants nationwide" }
+          ]
+        },
+        {
+          label: { ko: "2. 법적 보건관리자 핵심 업무 및 화학물질 관리", en: "2. Statutory H&S Manager Core Duties & Chemical Management" },
+          duties: [
+            { ko: "취급 화학물질(MSDS) 전수 조사·경고표지·교육 자료 현행화 — 화관법 대응 기초 확립", en: "Full MSDS audit and updated warning labels/training materials — Chemicals Control Act baseline established" },
+            { ko: "관리감독자·신규입사자·현장 근로자 대상 법정 의무교육 및 특별 안전교육 기획·실시", en: "Planned and delivered statutory mandatory training and special safety training for supervisors, new hires, and workers" },
+            { ko: "작업환경측정 및 임직원 특수·일반 건강검진 총괄, 유해인자 노출 저감 조치 실행", en: "Oversaw work-environment monitoring and special/general health checkups with hazard exposure-reduction measures" },
+            { ko: "연구실 안전점검 항목 미실시·미흡 이원화 기준 수립·적용", en: "Established 'not-implemented vs incomplete' two-tier classification for lab safety inspection items" },
+            { ko: "산업안전보건위원회 분기별 정기 개최 주도 및 노사 안전 심의·의결 운영", en: "Led quarterly OSH committee meetings and managed labor-management safety deliberation and resolution" }
+          ],
+          results: [
+            { ko: "과기정통부 주관 연구실 안전 현장점검 과태료 지적사항 0건", en: "Zero penalty findings in the Ministry of Science & ICT on-site lab safety inspection" }
+          ]
+        },
+        {
+          label: { ko: "3. 환경 인허가 및 전사 안전·환경 데이터 관리", en: "3. Environmental Permitting & EHS Data Management" },
+          duties: [
+            { ko: "전국 사업장 환경·안전 데이터, 인증, 법적 신고 현황 취합·관리 (본사 총괄)", en: "HQ-level integration of environmental/safety data, certifications, and statutory filing status for all nationwide sites" },
+            { ko: "현장 운영 실태와 신고 서류 대조를 통해 인허가 누락 항목 점검", en: "Cross-checked actual site operations against filed documents to identify permit gaps" }
+          ],
+          results: [
+            { ko: "수원 연구소 대기배출시설 변경신고 누락 발견·정정 — 인허가 리스크 사전 차단", en: "Identified and corrected unreported air-emissions facility change at Suwon Research Lab — permit risk pre-empted" }
+          ]
+        },
+        {
+          label: { ko: "4. 복리후생 기획", en: "4. Employee Benefits Planning" },
+          duties: [
+            { ko: "전사 복지몰 신규 도입 기획 및 운영 업체 계약 체결", en: "Planned introduction of new company welfare portal and contracted operating vendor" },
+            { ko: "하계휴양소 카라반 추가 도입 및 전 직원 공개추첨 배정 체계 수립", en: "Added caravan units at summer resort and established company-wide open lottery allocation system" }
+          ],
+          results: [
+            { ko: "복지몰 운영 업체 계약 체결, 퇴직 이후에도 임직원 대상 정상 운영 중", en: "Welfare portal vendor contracted; portal continues to operate normally for employees after departure" }
+          ]
+        }
       ]
     }
   ],
@@ -103,30 +173,30 @@ window.RESUME_DATA = {
     }
   ],
   skills: [
-    { ko: "법정 보건관리자 업무", en: "Statutory Health & Safety Manager duties",
-      desc: { ko: "유해인자·화학물질 관리, 작업환경측정, 건강검진 총괄", en: "Hazard/chemical control, work-environment monitoring, health checkup oversight" } },
-    { ko: "ISO 14001·45001 표준화·운영", en: "ISO 14001 / 45001 standardization",
-      desc: { ko: "전국 8개 공장 환경·안전보건경영시스템 통합 구축", en: "Integrated EHS management system across 8 plants nationwide" } },
+    { ko: "ESG 데이터 관리", en: "ESG data verification & levy settlement",
+      desc: { ko: "1,400개 회원사 데이터 취합 및 연 1,000억 원 분담금 산출·청구·정산", en: "Compile data for 1,400 members and run KRW 100B/yr levy lifecycle" } },
+    { ko: "데이터 정합성 확보", en: "Three-step cross-verification design",
+      desc: { ko: "자체 설계 검증으로 오차율 0%, 외부 감사 지적 0건 (2년 7개월)", en: "Self-designed checks: 0% error, zero audit findings for 31 months" } },
+    { ko: "대관·이해관계자 소통", en: "Government & stakeholder communication",
+      desc: { ko: "전국 설명회 단독 연사 10회 (회당 최대 400명) — 신규 가입 310건", en: "Sole speaker at 10 briefings (up to 400/session) — drove 310 enrollments" } },
     { ko: "EHS 점검·진단", en: "EHS inspection & diagnosis",
       desc: { ko: "회원사 55개 사업장 컴플라이언스 진단 및 맞춤형 개선안 제시", en: "Compliance diagnostics & tailored remediation for 55 member sites" } },
     { ko: "중대재해처벌법·화관법 대응", en: "Serious Accidents & Chemicals Control Act compliance",
       desc: { ko: "법적 의무 이행 점검, 리스크 분석, 경영진 보고 체계 수립", en: "Statutory duty checks, risk analysis, executive reporting framework" } },
-    { ko: "ESG 데이터 검증·분담금 정산", en: "ESG data verification & levy settlement",
-      desc: { ko: "1,400개 회원사 데이터 취합 및 연 1,000억 원 분담금 산출·청구·정산", en: "Compile data for 1,400 members and run KRW 100B/yr levy lifecycle" } },
-    { ko: "3단계 교차검증 설계", en: "Three-step cross-verification design",
-      desc: { ko: "자체 설계 검증으로 오차율 0%, 외부 감사 지적 0건 (2년 7개월)", en: "Self-designed checks: 0% error, zero audit findings for 31 months" } },
+    { ko: "법정 보건관리자 업무", en: "Statutory Health & Safety Manager duties",
+      desc: { ko: "유해인자·화학물질 관리, 작업환경측정, 건강검진 총괄", en: "Hazard/chemical control, work-environment monitoring, health checkup oversight" } },
+    { ko: "ISO 14001·45001 표준화·운영", en: "ISO 14001 / 45001 standardization",
+      desc: { ko: "전국 8개 공장 환경·안전보건경영시스템 통합 구축", en: "Integrated EHS management system across 8 plants nationwide" } },
     { ko: "AI·바이브코딩 업무 자동화", en: "AI / vibe-coding workflow automation",
       desc: { ko: "AICE Basic 취득 후 다중 출처 데이터 통합 프로그램 직접 개발·실사용", en: "Built and uses a multi-source data consolidation tool via AI-assisted coding" } },
-    { ko: "대관·이해관계자 소통", en: "Government & stakeholder communication",
-      desc: { ko: "전국 설명회 단독 연사 10회 (회당 최대 400명) — 신규 가입 310건", en: "Sole speaker at 10 briefings (up to 400/session) — drove 310 enrollments" } }
   ],
   tools: [
-    { ko: "Excel · 피벗 · 데이터 가공", en: "Excel · pivot · data",
-      desc: { ko: "분담금 산정·3단계 교차검증의 핵심 작업 도구", en: "Core tool for levy calculation & three-step cross-verification" } },
+    { ko: "OA(Excel · PPT · Word · 한글)", en: "Excel · pivot · data",
+      desc: { ko: "데이터 가공 및 문서 작성 도구", en: "Data processing and document creation" } },
+    { ko: "목표관리시스템(회원사 관리 시스템)", en: "-",
+      desc: { ko: "회원사 정보 관리 및 ESG 데이터 산출 시스템", en: "Member information management & ESG data calculation system" } },
     { ko: "국가법령정보센터", en: "Korean statutes portal",
       desc: { ko: "환경·안전 규정 조회 및 개정 이력 추적", en: "Environmental & safety regulation lookup and amendment tracking" } },
-    { ko: "환경공단 EcoAS", en: "K-eco EcoAS",
-      desc: { ko: "환경성보장제도 데이터 신고·관리 시스템", en: "EPR data reporting & management system" } },
     { ko: "MSDS · 화학물질정보처리시스템", en: "MSDS · Chemicals Information System",
       desc: { ko: "화관법 대응 화학물질 전수 조사·교육 자료 현행화", en: "Chemicals Control Act audit & label/training updates" } },
     { ko: "AI 프롬프트 (Claude·Gemini)", en: "AI prompting (Claude · Gemini)",
@@ -264,38 +334,43 @@ window.RESUME_DATA = {
   ],
   selfIntro: [
     {
+      tag: { ko: "리스크 차단 체계", en: "Risk Prevention" },
       title: { ko: "리스크 수준 기반 기준 재설계 — 선제적 문제 차단 체계 구축", en: "Criteria Redesign by Risk Level — Building Systems That Block Problems at the Source" },
       content: {
-        ko: "절차의 실제 운영 여부를 기준으로 안전 점검 항목을 재설계해, 과기정통부 주관 현장점검에서 과태료 지적사항 0건을 달성했습니다.\n\n동희산업 보건관리자로 일하며 전국 8개 제조 공장과 연구소의 안전보건 업무를 본사에서 통합 관리했습니다. 공장별 화학물질 등 유해인자 관리와 연구실 점검을 함께 담당했는데, 두 영역에 공통된 문제는 기존 체크리스트가 서류 유무만 확인할 뿐 절차의 실제 운영 여부는 식별하지 못한다는 점이었습니다.\n\n점검 항목을 법적 리스크 수준에 따라 두 종류로 분류했습니다. 법적 근거가 있음에도 절차 자체가 수립되지 않아 적발 시 법 위반에 해당하는 항목은 '미실시'로 분류해 문서화와 절차 수립을 최우선으로 처리했고, 형식은 갖췄으나 실제 운영이 불완전한 항목은 '미흡'으로 분류해 이행 근거 서류를 점검 전에 확보했습니다. 그 결과 과기정통부 주관 연구실 안전 현장점검을 과태료 지적사항 0건으로 마감했고, 같은 기준을 공장 순회 점검 체크리스트에 적용해 유해인자별 대응 우선순위도 정비했습니다.\n\n기준이 실제로 작동하는지 검증하는 방식으로 문제를 선제적으로 차단하겠습니다. 형식적 준수에 그치는 점검 항목을 실제 운영 여부 기준으로 재설계하고, 리스크 수준에 따라 대응 우선순위를 구조화해 가장 위험한 지점을 먼저 해소하는 체계를 만들겠습니다.",
-        en: "By redesigning safety inspection items around whether procedures actually operate, I closed a Ministry of Science and ICT on-site inspection with zero penalty findings.\n\nAs Donghee Industry's Health & Safety Manager I centrally managed EHS for 8 manufacturing plants and labs nationwide. Across both chemical hazard control and lab inspections, the structural problem was the same: existing checklists verified document existence but could not detect whether procedures were actually being followed.\n\nI classified inspection items by legal risk into two tiers. Items with no procedure established at all — where detection would constitute a legal violation — were classified as 'not implemented' and prioritized for immediate documentation. Items with a procedure on paper but incomplete in practice were classified as 'incomplete', with execution evidence secured before the inspection. The MSIT lab safety inspection closed with zero penalty findings, and the same framework was extended to plant patrol checklists to restructure hazard response priorities.\n\nIn any organisation, I will pre-empt problems by verifying whether standards actually operate rather than simply exist on paper. I will redesign inspection items around real execution, structure response priorities by risk level, and build systems that resolve the most critical gaps first."
+        ko: "절차의 실제 운영 여부를 기준으로 안전 점검 항목을 재설계해, 과기정통부 주관 현장점검에서 과태료 지적사항 0건을 달성했습니다.\n\n동희산업 보건관리자로 일하며 전국 8개 제조 공장과 연구소의 안전보건 업무를 본사에서 통합 관리했습니다. 공장별 화학물질 등 유해인자 관리와 연구실 점검을 함께 담당했는데, 두 영역에 공통된 문제는 기존 체크리스트가 서류 유무만 확인할 뿐 절차의 실제 운영 여부는 식별하지 못한다는 점이었습니다.\n\n점검 항목을 법적 리스크 수준에 따라 두 종류로 분류했습니다. 법적 근거가 있음에도 절차 자체가 수립되지 않아 적발 시 법 위반에 해당하는 항목은 '미실시'로 분류해 문서화와 절차 수립을 최우선으로 처리했고, 형식은 갖췄으나 실제 운영이 불완전한 항목은 '미흡'으로 분류해 이행 근거 서류를 점검 전에 확보했습니다. 그 결과 과기정통부 주관 연구실 안전 현장점검을 과태료 지적사항 0건으로 마감했고, 같은 기준을 공장 순회 점검 체크리스트에 적용해 유해인자별 대응 우선순위도 정비했습니다.\n\n리스크 항목을 심각도 기준으로 먼저 분류하겠습니다. 절차 자체가 없어 즉시 시정이 필요한 항목은 최우선으로 처리하고, 형식은 갖췄으나 운영이 불완전한 항목은 이행 근거를 점검 전에 확보하는 방식으로 대응하겠습니다. 이 이원화 기준을 점검 체계에 내재화해 같은 문제가 반복되지 않는 구조를 만들겠습니다.",
+        en: "By redesigning safety inspection items around whether procedures actually operate, I closed a Ministry of Science and ICT on-site inspection with zero penalty findings.\n\nAs Donghee Industry's Health & Safety Manager I centrally managed EHS for 8 manufacturing plants and labs nationwide. Across both chemical hazard control and lab inspections, the structural problem was the same: existing checklists verified document existence but could not detect whether procedures were actually being followed.\n\nI classified inspection items by legal risk into two tiers. Items with no procedure established at all — where detection would constitute a legal violation — were classified as 'not implemented' and prioritized for immediate documentation. Items with a procedure on paper but incomplete in practice were classified as 'incomplete', with execution evidence secured before the inspection. The MSIT lab safety inspection closed with zero penalty findings, and the same framework was extended to plant patrol checklists to restructure hazard response priorities.\n\nI will classify risk items by severity before anything else. Items with no procedure at all — requiring immediate correction — will be handled as the top priority. Items that exist formally but are incomplete in practice will be addressed by securing execution evidence before any review. By embedding this two-tier classification directly into the inspection framework, I will build a structure where the same finding does not repeat."
       }
     },
     {
+      tag: { ko: "데이터 무결성", en: "Data Integrity" },
       title: { ko: "데이터 검증 체계 직접 설계 · AI 자동화 — 오차를 구조적으로 차단하는 방식", en: "Self-Designed Verification System · AI Automation — Blocking Errors at the Structure Level" },
       content: {
-        ko: "이순환거버넌스에서 1,400개 회원사의 재활용 분담금 정산에 3단계 교차검증 체계를 설계해, 2년 7개월간 외부 감사 지적 0건을 유지했습니다.\n\n분담금은 신고량에서 의무량을 구하고 단가를 적용하는 누적 구조여서, 한 단계의 오류가 다음 단계로 이어졌습니다. 오차 하나가 회원사 부담과 기관 신뢰로 직결되는 구조였기에 세 단계 검증 절차를 직접 수립했습니다. 신고 데이터 총중량으로 전체 규모를 먼저 대조한 뒤, 품목군 기준치 이탈 여부와 과년도 3개년 평균을 순서대로 확인해 세 단계를 모두 충족한 값만 청구 자료로 확정했습니다. 그 결과 재직 기간 동안 연간 1,000억 원 규모의 정산 업무를 오차율 0%로 완벽히 수행했으며, 외부 감사에서 데이터 불일치 지적 사항 0건을 달성했습니다.\n\n검증 정확도는 확보했지만, 출처가 다른 데이터를 매번 수작업으로 취합하는 병목은 재직 중 해소하지 못했습니다. 이 한계를 보완하기 위해 AICE Basic 자격을 취득해 AI 활용 데이터 관리 역량을 학습했고, 바이브 코딩으로 여러 출처의 데이터를 한 화면에 모아 비교하는 프로그램을 직접 개발해 실사용하고 있습니다.\n\n흩어진 데이터를 통합하고 오차가 구조적으로 드러나는 검증 체계를 직접 설계하겠습니다. 출처별로 분산된 데이터를 단일 구조로 통합하고, 기준치와 이탈 조건을 설정해 이상 징후가 자동으로 감지되는 모니터링 체계를 구성하겠습니다. AI 도구를 활용한 반복 업무 자동화로 정확도와 효율을 함께 확보하겠습니다.",
-        en: "I designed a three-step cross-verification system for the recycling levy settlements of 1,400 member companies at E-Soonhwan Governance, sustaining zero external audit findings for 31 months.\n\nThe levy follows a cumulative structure — reported volume drives obligation, multiplied by a unit rate — so one step's error propagates into the next. Because any discrepancy directly impacts member-company cost and institutional credibility, I built three verification steps myself. I first reconciled total reported weight against the statutory figure, then screened for item-group threshold violations, then compared against the three-year historical average — confirming only values that cleared all three for billing. This delivered a 0% error rate on ~KRW 100B annual settlements and zero audit data-discrepancy findings.\n\nAccuracy was secured, but manually consolidating data from different sources remained an unresolved bottleneck during my tenure. To close that gap I earned AICE Basic to build AI-driven data management literacy, then built — via AI-assisted coding — a tool that pulls data from multiple sources into a single comparison view, now in daily use.\n\nI will design verification systems that consolidate scattered data and make errors structurally visible. By unifying data from multiple sources, setting thresholds and deviation conditions, and automating anomaly detection, I will build monitoring frameworks that surface problems before they propagate — with AI-assisted automation securing both accuracy and efficiency."
+        ko: "이순환거버넌스에서 1,400개 회원사의 재활용 분담금 정산에 3단계 교차검증 체계를 설계해, 2년 7개월간 외부 감사 지적 0건을 유지했습니다.\n\n분담금은 신고량에서 의무량을 구하고 단가를 적용하는 누적 구조여서, 한 단계의 오류가 다음 단계로 이어졌습니다. 오차 하나가 회원사 부담과 기관 신뢰로 직결되는 구조였기에 세 단계 검증 절차를 직접 수립했습니다. 신고 데이터 총중량으로 전체 규모를 먼저 대조한 뒤, 품목군 기준치 이탈 여부와 과년도 3개년 평균을 순서대로 확인해 세 단계를 모두 충족한 값만 청구 자료로 확정했습니다. 그 결과 재직 기간 동안 연간 1,000억 원 규모의 정산 업무를 오차율 0%로 완벽히 수행했으며, 외부 감사에서 데이터 불일치 지적 사항 0건을 달성했습니다.\n\n검증 정확도는 확보했지만, 출처가 다른 데이터를 매번 수작업으로 취합하는 병목은 재직 중 해소하지 못했습니다. 이 한계를 보완하기 위해 AICE Basic 자격을 취득해 AI 활용 데이터 관리 역량을 학습했고, 바이브 코딩으로 여러 출처의 데이터를 한 화면에 모아 비교하는 프로그램을 직접 개발해 실사용하고 있습니다.\n\n여러 단계를 거치는 데이터 업무에서 오류가 다음 단계로 전파되지 않도록 단계별 검증 기준을 먼저 설계하겠습니다. 전체 총량 대조부터 항목별 기준치 이탈, 과거 평균과의 비교까지 순서대로 확인해 오류가 증폭되기 전에 드러나는 구조를 만들겠습니다. 출처가 다른 데이터의 반복 취합은 AI 도구로 자동화해 검증 판단에 집중할 여력을 확보하겠습니다.",
+        en: "I designed a three-step cross-verification system for the recycling levy settlements of 1,400 member companies at E-Soonhwan Governance, sustaining zero external audit findings for 31 months.\n\nThe levy follows a cumulative structure — reported volume drives obligation, multiplied by a unit rate — so one step's error propagates into the next. Because any discrepancy directly impacts member-company cost and institutional credibility, I built three verification steps myself. I first reconciled total reported weight against the statutory figure, then screened for item-group threshold violations, then compared against the three-year historical average — confirming only values that cleared all three for billing. This delivered a 0% error rate on ~KRW 100B annual settlements and zero audit data-discrepancy findings.\n\nAccuracy was secured, but manually consolidating data from different sources remained an unresolved bottleneck during my tenure. To close that gap I earned AICE Basic to build AI-driven data management literacy, then built — via AI-assisted coding — a tool that pulls data from multiple sources into a single comparison view, now in daily use.\n\nIn multi-step data work, I will design stage-by-stage verification criteria first so that errors do not propagate to the next step. Working from total-volume reconciliation through item-level threshold checks to historical average comparisons, I will build a structure where errors surface before they amplify downstream. Recurring consolidation of data from different sources will be automated with AI tooling, freeing capacity for the verification judgements that actually matter."
       }
     },
     {
+      tag: { ko: "표준화 · 협업", en: "Standardization" },
       title: { ko: "다거점 문서 표준화와 수평전개 체계 구축 — 현장 저항 없이 기준을 정착시키는 방식", en: "Multi-site Standardization & Horizontal Rollout — Making Standards Stick Without Field Resistance" },
       content: {
-        ko: "공장마다 달랐던 ISO 45001 문서를 통합하기 위해 표준화 기준을 직접 설계하고, 담당자들이 같은 기준으로 작업하는 수평 전개 채널을 구축했습니다.\n\n동희산업에서 안전보건 업무를 본사에서 통합 관리하던 중, 공장마다 문서 양식이 달라 취합·검토할 때마다 기준을 재조정해야 했습니다. 각 공장 담당자는 \"우리 현장은 공정이 다르다\"라는 입장이었고, 차이를 전면 수용하면 표준화가 불가했지만 무시하면 현장이 따르지 않았습니다.\n\n이때 차이를 허용 가능한 항목과 통합 대상 항목으로 이원화했습니다. 단순 서식 차이는 공통 양식으로 통합하고, 각 공장 담당자와 세부 지침을 조율한 뒤 문서화했습니다. 반면 도장과 조립처럼 공정 자체가 다른 경우는 예외 항목으로 분류해 별도 관리했습니다. 동시에 전사 단체 메신저 채널을 개설해 매일 아침 이슈와 변경 사항을 공유하도록 했습니다. 한 공장의 개선 사례가 다른 공장의 문제를 사전에 해소하는 수평전개 구조를 정착시킴으로써, 전사 안전관리 수준이 상향 평준화되도록 설계했습니다.\n\기준이 형식으로 그치지 않고 현장에서 실제로 작동하도록 문서 체계를 정비하겠습니다. 허용 가능한 차이와 통합 대상 차이를 구분하고, 변경 사항이 모든 거점에 즉시 반영되는 소통 구조를 만들어 기준이 살아있는 체계로 유지되도록 설계하겠습니다.",
-        en: "To unify the ISO 45001 documents that varied plant-to-plant, I designed standardization criteria myself and built a horizontal-rollout channel so plant leads worked from the same baseline.\n\nWhile centrally managing EHS at Donghee Industry, every consolidation required re-aligning criteria because each plant's document format was different. Plant leads insisted \"our process is different\" — accepting all differences killed standardization, but ignoring them meant the field would not comply.\n\nI split differences into two buckets. Pure format differences were merged into a common template after coordinating detailed guidance with each plant. Items where the process itself differed — like painting versus assembly — were classified as exceptions and managed separately. In parallel, I opened a company-wide messenger channel for daily sharing of issues and changes, so one plant's improvement preempted another plant's problem. The result was a horizontal rollout that leveled up safety management across the company.\n\nIn any organisation, I will ensure standards operate on the ground rather than existing only on paper. By distinguishing acceptable variation from items to consolidate, and building a communication structure where changes propagate to all sites immediately, I will design systems that keep standards alive and actionable."
+        ko: "공장마다 달랐던 ISO 45001 문서를 통합하기 위해 표준화 기준을 직접 설계하고, 담당자들이 같은 기준으로 작업하는 수평 전개 채널을 구축했습니다.\n\n동희산업에서 안전보건 업무를 본사에서 통합 관리하던 중, 공장마다 문서 양식이 달라 취합·검토할 때마다 기준을 재조정해야 했습니다. 각 공장 담당자는 \"우리 현장은 공정이 다르다\"라는 입장이었고, 차이를 전면 수용하면 표준화가 불가했지만 무시하면 현장이 따르지 않았습니다.\n\n이때 차이를 허용 가능한 항목과 통합 대상 항목으로 이원화했습니다. 단순 서식 차이는 공통 양식으로 통합하고, 각 공장 담당자와 세부 지침을 조율한 뒤 문서화했습니다. 반면 도장과 조립처럼 공정 자체가 다른 경우는 예외 항목으로 분류해 별도 관리했습니다. 동시에 전사 단체 메신저 채널을 개설해 매일 아침 이슈와 변경 사항을 공유하도록 했습니다. 한 공장의 개선 사례가 다른 공장의 문제를 사전에 해소하는 수평전개 구조를 정착시킴으로써, 전사 안전관리 수준이 상향 평준화되도록 설계했습니다.\n\n다양한 주체를 대상으로 기준을 수립할 때 각자의 실제 차이를 먼저 파악하겠습니다. 통합 가능한 차이는 공통 양식으로 묶고, 실질적으로 다른 항목은 예외로 인정해 각자의 현실을 반영하겠습니다. 변경 사항은 공유 채널을 통해 모든 조직에 즉시 전파해, 한 곳의 개선이 다른 곳의 문제를 사전에 해소하는 수평전개 구조를 유지하겠습니다.",
+        en: "To unify the ISO 45001 documents that varied plant-to-plant, I designed standardization criteria myself and built a horizontal-rollout channel so plant leads worked from the same baseline.\n\nWhile centrally managing EHS at Donghee Industry, every consolidation required re-aligning criteria because each plant's document format was different. Plant leads insisted \"our process is different\" — accepting all differences killed standardization, but ignoring them meant the field would not comply.\n\nI split differences into two buckets. Pure format differences were merged into a common template after coordinating detailed guidance with each plant. Items where the process itself differed — like painting versus assembly — were classified as exceptions and managed separately. In parallel, I opened a company-wide messenger channel for daily sharing of issues and changes, so one plant's improvement preempted another plant's problem. The result was a horizontal rollout that leveled up safety management across the company.\n\nWhen establishing shared standards across different teams or sites, I will first identify what actually differs between each party. Differences that can be unified will be merged into a common template; items that are genuinely distinct will be classified as exceptions and respected. Changes will propagate to every part of the organisation immediately through a shared channel — maintaining a horizontal-rollout structure where one team's improvement resolves another's problem before it occurs."
       }
     },
     {
+      tag: { ko: "이해관계자 소통", en: "Communication" },
       title: { ko: "복잡한 정보를 청중의 업무 흐름으로 재구성 — 단독 연사 10회, 신규 가입 310건", en: "Restructuring Complex Information Around the Audience's Workflow — 10 Solo Briefings, 310 Enrollments" },
       content: {
-        ko: "국가기관 설명회에 단독 연사로 10회 참석해, 법 조문 순서가 아닌 실무자의 실제 업무 흐름에 맞춰 설명 구조를 재배열함으로써 신규 가입 310건을 이끌어냈습니다.\n\n한국환경공단 주관 환경성보장제도 설명회에 공제조합 대표 연사로 참여했습니다. 법령 조문 순서대로 전달하면 청중이 제도를 자사 업무와 연결하지 못했습니다. 회당 최대 400명이 참석하는 자리에서 설명이 실무로 이어지지 않으면 가입 행동으로 연결되지 않는다는 문제였습니다.\n\n설명 순서를 법 조문 기준에서 기업이 실제로 거치는 업무 흐름 순으로 재배열했습니다. 특히 규제 첫해에 우선 대응해야 하는 출고량 신고 등 주요 업무를 먼저 다루고, 이어 공제조합 가입 절차와 비용 순으로 구성해 실제 업무를 수행하는 순서대로 설명했습니다. 또한 회차마다 반복되는 질문 패턴을 기록해 다음 회차에서는 해당 항목을 앞쪽으로 배치해 선제적으로 설명했고, 법령 개정 사항은 다음 회차에 즉시 반영했습니다. 그 결과 3개월 만에 설립 후 10년간 누적된 회원사의 약 22%에 해당하는 신규 가입 310건을 이끌어냈습니다.\n\n어떤 주제든 상대방이 실제로 거치는 업무 흐름에 맞게 정보를 재구성하겠습니다. 규정이나 기준을 나열하는 방식에서 벗어나, 청중이 가장 먼저 맞닥뜨리는 지점부터 순서대로 전달하고 반복되는 질문을 선제적으로 배치해 정보가 행동 변화로 이어지는 소통 구조를 만들겠습니다.",
-        en: "Speaking solo at 10 government briefings, I reordered the content from statutory article sequence to the practitioner's actual workflow — driving 310 new enrollments.\n\nI represented the mutual-aid cooperative as sole speaker at K-eco's Extended Producer Responsibility briefings. Presented in article order, the audience could not connect the program to their own operations. With up to 400 attendees per session, if the explanation did not translate to practice, it would not translate to enrollment.\n\nI restructured the sequence to follow how companies actually operate. Critical first-year tasks like shipment-volume reporting came first, then cooperative enrollment steps and costs — in the order practitioners would execute. I logged recurring questions each session and moved them to the opening of the next as pre-emptive answers; any regulatory amendment was reflected immediately. Three months in, the approach delivered 310 new enrollments — roughly 22% of the cumulative member base built up over the prior decade.\n\nOn any subject, I will restructure information to match the workflow the audience actually moves through. Rather than presenting rules or standards in prescribed order, I will sequence from what the audience encounters first, pre-empt recurring questions, and build communication structures that translate information into behaviour change."
+        ko: "국가기관 설명회에 단독 연사로 10회 참석해, 법 조문 순서가 아닌 실무자의 실제 업무 흐름에 맞춰 설명 구조를 재배열함으로써 신규 가입 310건을 이끌어냈습니다.\n\n한국환경공단 주관 환경성보장제도 설명회에 공제조합 대표 연사로 참여했습니다. 법령 조문 순서대로 전달하면 청중이 제도를 자사 업무와 연결하지 못했습니다. 회당 최대 400명이 참석하는 자리에서 설명이 실무로 이어지지 않으면 가입 행동으로 연결되지 않는다는 문제였습니다.\n\n설명 순서를 법 조문 기준에서 기업이 실제로 거치는 업무 흐름 순으로 재배열했습니다. 특히 규제 첫해에 우선 대응해야 하는 출고량 신고 등 주요 업무를 먼저 다루고, 이어 공제조합 가입 절차와 비용 순으로 구성해 실제 업무를 수행하는 순서대로 설명했습니다. 또한 회차마다 반복되는 질문 패턴을 기록해 다음 회차에서는 해당 항목을 앞쪽으로 배치해 선제적으로 설명했고, 법령 개정 사항은 다음 회차에 즉시 반영했습니다. 그 결과 3개월 만에 설립 후 10년간 누적된 회원사의 약 22%에 해당하는 신규 가입 310건을 이끌어냈습니다.\n\n제도나 기준의 나열 순서가 아닌 상대방이 실제로 일하는 순서로 설명하겠습니다. 첫 번째 설명부터 반복되는 질문을 기록해 다음 회차의 앞쪽에 배치하고, 내용이 바뀌면 즉시 반영해 청중이 자리로 돌아가 바로 적용할 수 있는 설명 구조를 만들겠습니다.",
+        en: "Speaking solo at 10 government briefings, I reordered the content from statutory article sequence to the practitioner's actual workflow — driving 310 new enrollments.\n\nI represented the mutual-aid cooperative as sole speaker at K-eco's Extended Producer Responsibility briefings. Presented in article order, the audience could not connect the program to their own operations. With up to 400 attendees per session, if the explanation did not translate to practice, it would not translate to enrollment.\n\nI restructured the sequence to follow how companies actually operate. Critical first-year tasks like shipment-volume reporting came first, then cooperative enrollment steps and costs — in the order practitioners would execute. I logged recurring questions each session and moved them to the opening of the next as pre-emptive answers; any regulatory amendment was reflected immediately. Three months in, the approach delivered 310 new enrollments — roughly 22% of the cumulative member base built up over the prior decade.\n\nI will explain in the order the audience actually works — not in the sequence of a policy document or standard. From the first session I will log recurring questions and move them to the front of the next, and any content update will be reflected immediately. By the time the audience returns to their desk, the explanation should already map to the action they need to take."
       }
     },
     {
+      tag: { ko: "내·외부 시각", en: "Dual Perspective" },
       title: { ko: "내부 실행과 외부 진단 양쪽의 시각 — 객관성과 실행력을 함께 갖춘 접근", en: "Inside Executor & Outside Diagnoser — Combining Objectivity with Implementation Authority" },
       content: {
-        ko: "리스크 관리 업무는 외부 규제 기관의 관점으로 내부 실행을 선제적으로 관리해야 한다고 생각합니다.\n\n동희산업에서 법적 보건관리자로 법정 업무 전반을 직접 수행했습니다. 개선이 필요한 항목을 파악해도 예산과 우선순위에서 밀려 외부 점검에서 개선 지적을 받는 상황을 경험했습니다. 이후 이순환거버넌스에서 회원사 55개 사업장을 EHS 현장점검하며 외부 조력자 역할을 담당했는데, 점검 보고서를 제출해도 이후 시정이 이뤄졌는지 확인하거나 개입할 수단이 없었습니다.\n\n내부 담당자로 일할 때는 현장을 바꿀 수 있었지만, 현장 업무에 익숙해질수록 외부 규제 기준을 객관적으로 들여다보는 시각이 약해졌습니다. 반대로 외부 조력자로 전환한 뒤에는 진단의 객관성은 높아졌지만 실행 권한이 없었습니다. 두 역할을 순서대로 거치면서, 규제 기준을 단순히 적용하는 것을 넘어 내부의 법적 리스크 관리 기획과 운영에 내재화할 때 비로소 실질적인 개선을 이끌어낼 수 있음을 깨달았습니다.\n\n외부의 시각으로 내부를 먼저 점검하는 방식으로 일하겠습니다. 내부에 익숙해지면 놓치기 쉬운 지점을 외부 진단 경험으로 포착하고, 외부에서 진단만 하고 실행하지 못했던 한계를 내부 권한으로 해소하겠습니다. 정기적인 자체 진단 체계와 데이터 기반 우선순위 보고 구조를 통해 문제가 외부에서 먼저 발견되기 전에 내부에서 선제적으로 처리되는 방식을 정착시키겠습니다.",
-        en: "I believe health management requires managing internal execution proactively, through the lens of external regulators.\n\nAt Donghee Industry I executed statutory H&S duties firsthand. Even when I identified items needing improvement, budget and priority constraints sometimes meant they surfaced as external inspection findings. Later at E-Soonhwan Governance I shifted to the external advisor role across 55 member sites — but once a report was submitted, I had no way to verify or drive remediation.\n\nWorking inside gave me execution authority, but familiarity with daily operations gradually weakened the regulatory vantage point. Switching to an external role sharpened diagnostic objectivity but removed implementation authority. Having moved through both, I concluded that real improvement requires more than applying regulations — it requires internalizing the regulator's lens into in-house risk planning and operations.\n\nI will work by examining the inside through an outsider's lens. The external diagnostician experience lets me spot what familiarity makes invisible; the internal executor experience means I can act where diagnosis alone cannot. Through regular self-audit cycles and data-driven priority reporting, I will build systems where problems are resolved internally before they surface externally."
+        ko: "리스크 관리 업무는 외부 규제 기관의 관점으로 내부 실행을 선제적으로 관리해야 한다고 생각합니다.\n\n동희산업에서 법적 보건관리자로 법정 업무 전반을 직접 수행했습니다. 개선이 필요한 항목을 파악해도 예산과 우선순위에서 밀려 외부 점검에서 개선 지적을 받는 상황을 경험했습니다. 이후 이순환거버넌스에서 회원사 55개 사업장을 EHS 현장점검하며 외부 조력자 역할을 담당했는데, 점검 보고서를 제출해도 이후 시정이 이뤄졌는지 확인하거나 개입할 수단이 없었습니다.\n\n내부 담당자로 일할 때는 현장을 바꿀 수 있었지만, 현장 업무에 익숙해질수록 외부 규제 기준을 객관적으로 들여다보는 시각이 약해졌습니다. 반대로 외부 조력자로 전환한 뒤에는 진단의 객관성은 높아졌지만 실행 권한이 없었습니다. 두 역할을 순서대로 거치면서, 규제 기준을 단순히 적용하는 것을 넘어 내부의 법적 리스크 관리 기획과 운영에 내재화할 때 비로소 실질적인 개선을 이끌어낼 수 있음을 깨달았습니다.\n\n조직 내부에서 일할 때도 외부인의 시각을 놓치지 않겠습니다. 익숙한 환경에 오래 있을수록 외부인이 먼저 포착하는 문제가 안 보이기 시작하는데, 외부 조력자로 일한 경험이 그 사각지대를 짚어줍니다. 정기적인 자체 진단과 데이터 기반 우선순위 보고 체계를 통해 문제가 외부에서 먼저 드러나기 전에 내부에서 먼저 포착되도록 하겠습니다.",
+        en: "I believe risk management requires managing internal execution proactively, through the lens of external regulators.\n\nAt Donghee Industry I executed statutory H&S duties firsthand. Even when I identified items needing improvement, budget and priority constraints sometimes meant they surfaced as external inspection findings. Later at E-Soonhwan Governance I shifted to the external advisor role across 55 member sites — but once a report was submitted, I had no way to verify or drive remediation.\n\nWorking inside gave me execution authority, but familiarity with daily operations gradually weakened the regulatory vantage point. Switching to an external role sharpened diagnostic objectivity but removed implementation authority. Having moved through both, I concluded that real improvement requires more than applying regulations — it requires internalizing the regulator's lens into in-house risk planning and operations.\n\nEven while working inside an organisation, I will not lose the outsider's perspective. The longer you are embedded in daily operations, the harder it becomes to see what someone from outside would notice first — experience as an external advisor fills that blind spot. Through regular self-audit cycles and a data-driven priority reporting structure, I will ensure problems are identified and resolved internally before they surface to the outside."
       }
     }
   ]

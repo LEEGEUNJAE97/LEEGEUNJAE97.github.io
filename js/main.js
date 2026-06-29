@@ -134,18 +134,23 @@
     (function () {
       var container = $("#self-intro-content");
       (DATA.selfIntro || []).forEach(function (item) {
-        var card = el("div", "card reveal");
-        if (item.title) {
+        var card = el("div", "card si-card reveal");
+        if (item.tag) {
           var badge = el("span", "card__type");
-          bilingual(badge, item.title);
+          bilingual(badge, item.tag);
           card.appendChild(badge);
+        }
+        if (item.title) {
+          var h3 = el("h3", "si-title");
+          bilingual(h3, item.title);
+          card.appendChild(h3);
         }
         var pair = item.content || item;
         ["ko", "en"].forEach(function (lang) {
           var text = (pair && pair[lang]) || "";
           var outer = el("span", lang);
-          text.split("\n\n").filter(Boolean).forEach(function (para) {
-            outer.appendChild(el("p", "self-intro__body", para.trim()));
+          text.split("\n\n").filter(Boolean).forEach(function (para, i) {
+            outer.appendChild(el("p", "self-intro__body" + (i === 0 ? " si-lead" : ""), para.trim()));
           });
           card.appendChild(outer);
         });
@@ -166,10 +171,29 @@
       var h3 = el("h3", "card__title");
       bilingual(h3, job.title); titleWrap.appendChild(h3);
       var comp = el("div", "card__company"); bilingual(comp, job.company); titleWrap.appendChild(comp);
+      if (job.note) { var note = el("div", "card__sub"); bilingual(note, job.note); titleWrap.appendChild(note); }
       top.appendChild(titleWrap);
       top.appendChild(el("span", "card__period", job.period || ""));
       card.appendChild(top);
-      if (job.highlights && job.highlights.length) {
+      if (job.groups && job.groups.length) {
+        job.groups.forEach(function (g) {
+          var grp = el("div", "job__group");
+          if (g.label) { var lbl = el("div", "job__group-label"); bilingual(lbl, g.label); grp.appendChild(lbl); }
+          if (g.duties && g.duties.length) {
+            var dl = el("div", "job__section-label"); bilingual(dl, { ko: "주요 업무", en: "Duties" }); grp.appendChild(dl);
+            var ul = el("ul", "card__highlights");
+            g.duties.forEach(function (h) { ul.appendChild(bilingual(el("li"), h)); });
+            grp.appendChild(ul);
+          }
+          if (g.results && g.results.length) {
+            var rl = el("div", "job__section-label"); bilingual(rl, { ko: "주요 성과", en: "Key Outcomes" }); grp.appendChild(rl);
+            var ru = el("ul", "card__highlights card__highlights--results");
+            g.results.forEach(function (h) { ru.appendChild(bilingual(el("li"), h)); });
+            grp.appendChild(ru);
+          }
+          card.appendChild(grp);
+        });
+      } else if (job.highlights && job.highlights.length) {
         var ul = el("ul", "card__highlights");
         job.highlights.forEach(function (h) { ul.appendChild(bilingual(el("li"), h)); });
         card.appendChild(ul);

@@ -145,9 +145,27 @@ code { background: var(--bg-alt); padding: .1em .35em; border-radius: 5px; font-
 .about__text { font-size: 1.08rem; color: var(--ink); }
 
 /* ---------- 자기소개 탭 ---------- */
-.self-intro__body { font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin: 0; }
+.self-intro__body { font-size: 1rem; line-height: 1.85; color: var(--ink); margin: 0; }
+.self-intro__body + .self-intro__body { margin-top: 12px; }
 .about__sentence { display: block; }
 .about__sentence + .about__sentence { margin-top: .55em; }
+
+/* 자기소개 카드 */
+.si-card { padding: 22px 24px; }
+.si-title {
+  font-size: 1.1rem; font-weight: 700; color: var(--ink);
+  margin: 8px 0 16px; line-height: 1.45; letter-spacing: -.01em;
+}
+/* 첫 단락 — 핵심 요약 강조 */
+.si-lead {
+  font-size: 1.02rem; font-weight: 600; color: var(--accent-dark);
+  line-height: 1.85;
+  padding: 16px 18px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(74, 103, 65, .14);
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
 
 /* ---------- 타임라인(경력/학력/프로젝트) ---------- */
 .timeline { display: grid; gap: 16px; }
@@ -305,6 +323,16 @@ code { background: var(--bg-alt); padding: .1em .35em; border-radius: 5px; font-
 
 #skill-list-tab li { border-left: 3px solid #4A6741; }
 #tool-list-tab li  { border-left: 3px solid #4A6080; }
+
+/* ---------- 카드 내 업무 카테고리 그룹 ---------- */
+.job__group { margin-top: 16px; }
+.job__group + .job__group { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 14px; }
+.job__group-label { font-size: .85rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 8px; }
+.job__section-label {
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-soft); margin: 10px 0 5px;
+}
+.card__highlights--results li::before { background: #8ABF82; }
 
 /* ---------- 연락처 ---------- */
 .contact-list { display: grid; gap: 12px; max-width: 520px; }
