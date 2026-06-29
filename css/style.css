@@ -174,13 +174,137 @@ code { background: var(--bg-alt); padding: .1em .35em; border-radius: 5px; font-
 }
 
 /* ---------- 자격증 & 역량 ---------- */
-.skills-grid { display: grid; gap: 28px; }
-@media (min-width: 640px) { .skills-grid { grid-template-columns: 1fr 1fr; } }
+/* 메인: 컴팩트 3행 */
+.skills-compact { display: grid; gap: 20px; }
+
+/* 탭: 자격증 전체너비 → 역량/툴 순 */
+.skills-grid { display: grid; gap: 48px; grid-template-columns: 1fr; }
+
+/* 자격증 카테고리 그룹 */
+.cert-groups { display: grid; grid-template-columns: 1fr; gap: 0 32px; }
+@media (min-width: 560px) { .cert-groups { grid-template-columns: 1fr 1fr; } }
+.cert-group + .cert-group { margin-top: 0; }
+.cert-group__title {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-soft); margin: 28px 0 12px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.cert-group:first-child .cert-group__title,
+.cert-group:nth-child(2) .cert-group__title { margin-top: 8px; }
+.cert-group[data-cat="ehs"]     .cert-group__title { color: #4A6741; }
+.cert-group[data-cat="digital"] .cert-group__title { color: #4A6080; }
+.cert-group[data-cat="lang"]    .cert-group__title { color: #8A7055; }
+.cert-group[data-cat="other"]   .cert-group__title { color: #6B7280; }
+
+/* 평면 리스트 — 카드 제거, 좌측 카테고리 색 라인 */
+.cert-list { display: grid; grid-template-columns: 1fr; gap: 0; list-style: none; }
+.cert-list li {
+  background: transparent; border: none; box-shadow: none; border-radius: 0;
+  display: grid; grid-template-columns: 1fr auto; column-gap: 16px; align-items: baseline;
+  padding: 12px 0 12px 16px;
+  border-left: 3px solid #9CA3AF;
+}
+.cert-list li + li { border-top: 1px solid var(--line); }
+.cert-group[data-cat="ehs"]     .cert-list li { border-left-color: #4A6741; }
+.cert-group[data-cat="digital"] .cert-list li { border-left-color: #4A6080; }
+.cert-group[data-cat="lang"]    .cert-list li { border-left-color: #8A7055; }
+.cert-group[data-cat="other"]   .cert-list li { border-left-color: #6B7280; }
+
+/* 자격증명 — 카테고리 색 + 굵게 */
+.cert-list li > .ko:not([hidden]),
+.cert-list li > .en:not([hidden]) {
+  display: block; grid-column: 1; grid-row: 1;
+  font-size: 1rem; font-weight: 700; color: var(--ink); line-height: 1.35;
+}
+.cert-group[data-cat="ehs"]     .cert-list li > .ko:not([hidden]),
+.cert-group[data-cat="ehs"]     .cert-list li > .en:not([hidden]) { color: #3A5E34; }
+.cert-group[data-cat="digital"] .cert-list li > .ko:not([hidden]),
+.cert-group[data-cat="digital"] .cert-list li > .en:not([hidden]) { color: #334F6A; }
+.cert-group[data-cat="lang"]    .cert-list li > .ko:not([hidden]),
+.cert-group[data-cat="lang"]    .cert-list li > .en:not([hidden]) { color: #7A6045; }
+.cert-group[data-cat="other"]   .cert-list li > .ko:not([hidden]),
+.cert-group[data-cat="other"]   .cert-list li > .en:not([hidden]) { color: var(--ink); }
+
+/* 설명 */
+.cert-desc {
+  grid-column: 1; grid-row: 2;
+  margin: 4px 0 0; font-size: 0.82rem; font-weight: 400;
+  color: var(--ink-soft); line-height: 1.5;
+}
+/* 날짜 */
+.cert-date {
+  grid-column: 2; grid-row: 1;
+  margin: 0; font-size: 0.82rem; font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  text-align: right; white-space: nowrap;
+}
+
+/* 칩 — 핵심 역량(강조 톤) / 사용 툴(중립 톤) */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li {
-  background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
-  padding: 7px 14px; font-size: .92rem; font-weight: 500; box-shadow: var(--shadow);
+  border: none; box-shadow: none;
+  border-radius: 999px; padding: 7px 14px; font-size: 0.88rem;
+  transition: background-color .15s;
 }
+#cert-list li {
+  background: var(--bg); color: var(--ink-soft); font-weight: 500;
+  border: 1px solid var(--line);
+}
+#cert-list li:hover { background: var(--bg-alt); }
+
+/* 메인 칩 */
+#skill-list li {
+  background: var(--accent-soft); color: var(--accent-dark); font-weight: 600;
+}
+#skill-list li:hover { background: #cfe2d8; }
+#tool-list li {
+  background: var(--line); color: var(--ink-soft); font-weight: 500;
+}
+#tool-list li:hover { background: #cfd4d6; }
+
+/* 탭 — 역량·툴 카드 그리드 */
+.skill-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  list-style: none;
+}
+.skill-card-grid li {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+
+/* 카드 이름 — 액센트 색 + 굵게 */
+.skill-card-grid li > .ko:not([hidden]),
+.skill-card-grid li > .en:not([hidden]) {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+#skill-list-tab li > .ko:not([hidden]),
+#skill-list-tab li > .en:not([hidden]) { color: #3A5E34; }
+#tool-list-tab li  > .ko:not([hidden]),
+#tool-list-tab li  > .en:not([hidden]) { color: #334F6A; }
+
+/* 카드 설명 — 구분선 + 작게 + 흐리게 */
+.skill-card-grid .cert-desc {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  grid-column: unset; grid-row: unset;
+}
+
+#skill-list-tab li { border-left: 3px solid #4A6741; }
+#tool-list-tab li  { border-left: 3px solid #4A6080; }
 
 /* ---------- 연락처 ---------- */
 .contact-list { display: grid; gap: 12px; max-width: 520px; }
@@ -209,7 +333,7 @@ code { background: var(--bg-alt); padding: .1em .35em; border-radius: 5px; font-
 
 /* ---------- 인쇄 / PDF ---------- */
 @media print {
-  .site-header, .hero__cta, .edit-banner, .lock-badge, .modal, .skip-link, #print-btn { display: none !important; }
+  .site-header, .hero__cta, .edit-banner, .lock-badge, .modal, .skip-link { display: none !important; }
   body { color: #000; }
   .section { display: block; padding: 18px 0; page-break-inside: avoid; }
   .page-block { padding: 18px 0; page-break-inside: avoid; }

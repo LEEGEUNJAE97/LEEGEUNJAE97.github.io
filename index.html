@@ -30,6 +30,7 @@
 
       <ul class="nav__links" id="nav-links">
         <li><a href="#history"><span class="ko">연혁</span><span class="en" hidden>Timeline</span></a></li>
+        <li><a href="#skills-tab"><span class="ko">자격 및 역량</span><span class="en" hidden>Qualifications &amp; Skills</span></a></li>
         <li><a href="#self-intro"><span class="ko">자기소개</span><span class="en" hidden>About Me</span></a></li>
         <li class="nav__projects-li" hidden><a href="#projects"><span class="ko">프로젝트</span><span class="en" hidden>Projects</span></a></li>
       </ul>
@@ -54,11 +55,8 @@
           <p class="hero__headline" id="hero-headline"></p>
           <div class="hero__cta">
             <a href="#contact" class="btn btn--accent">
-              <span class="ko">연락하기</span><span class="en" hidden>Get in touch</span>
+              <span class="ko">연락처</span><span class="en" hidden>Contact</span>
             </a>
-            <button type="button" class="btn btn--ghost" id="print-btn">
-              <span class="ko">🖨️ PDF로 저장</span><span class="en" hidden>🖨️ Save as PDF</span>
-            </button>
           </div>
         </div>
         <div class="hero__photo" id="hero-photo" hidden>
@@ -77,20 +75,25 @@
       </div>
     </section>
 
-    <!-- ====================== Certifications & Skills (메인 페이지) ====================== -->
+    <!-- ====================== Certifications & Skills (메인 페이지 — 컴팩트) ====================== -->
     <section id="skills" class="page-block page-block--alt">
       <div class="container">
         <div class="section__head">
           <h2 class="section__title"><span class="ko">자격증 &amp; 역량</span><span class="en" hidden>Certifications &amp; Skills</span></h2>
+          <a href="#skills-tab" class="btn btn--ghost btn--sm"><span class="ko">자세히 보기 →</span><span class="en" hidden>See details →</span></a>
         </div>
-        <div class="skills-grid">
+        <div class="skills-compact">
           <div>
             <h3 class="subhead"><span class="ko">자격증</span><span class="en" hidden>Certifications</span></h3>
             <ul class="chips" id="cert-list"></ul>
           </div>
           <div>
-            <h3 class="subhead"><span class="ko">핵심 역량</span><span class="en" hidden>Core skills</span></h3>
+            <h3 class="subhead"><span class="ko">핵심 역량</span><span class="en" hidden>Core Skills</span></h3>
             <ul class="chips" id="skill-list"></ul>
+          </div>
+          <div>
+            <h3 class="subhead"><span class="ko">사용 툴 · 시스템</span><span class="en" hidden>Tools &amp; Systems</span></h3>
+            <ul class="chips" id="tool-list"></ul>
           </div>
         </div>
       </div>
@@ -123,6 +126,29 @@
           <h2 class="section__title"><span class="ko">연혁</span><span class="en" hidden>Timeline</span></h2>
         </div>
         <div class="timeline" id="history-list"></div>
+      </div>
+    </section>
+
+    <!-- ====================== 자격 및 역량 (탭) ====================== -->
+    <section id="skills-tab" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title"><span class="ko">자격 및 역량</span><span class="en" hidden>Qualifications &amp; Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-grid__certs">
+            <h3 class="subhead"><span class="ko">자격증</span><span class="en" hidden>Certifications</span></h3>
+            <div class="cert-groups" id="cert-list-tab"></div>
+          </div>
+          <div>
+            <h3 class="subhead"><span class="ko">핵심 역량</span><span class="en" hidden>Core Skills</span></h3>
+            <ul class="skill-card-grid" id="skill-list-tab"></ul>
+          </div>
+          <div>
+            <h3 class="subhead"><span class="ko">사용 툴 · 시스템</span><span class="en" hidden>Tools &amp; Systems</span></h3>
+            <ul class="skill-card-grid" id="tool-list-tab"></ul>
+          </div>
+        </div>
       </div>
     </section>
 

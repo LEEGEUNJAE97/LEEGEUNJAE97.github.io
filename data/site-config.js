@@ -8,8 +8,15 @@ window.SITE_CONFIG = {
     ko: "외부에서 진단하고, 내부에서 실행한 경험으로 ESG 체계를 완성하겠습니다.",
     en: "Building complete ESG systems — diagnosing from outside, executing from within."
   },
-  subtitle: { ko: "ESG · 산업안전 · 환경기사 · 보건관리자 직무 지원", en: "Seeking ESG · Industrial Safety · Environmental · Health Manager roles" },
-  contact: { email: "as7688@naver.com", phone: "010-5586-1474", linkedin: "", github: "" },
+  subtitle: { ko: "ESG · 산업안전보건 · 환경기사 직무 지원", en: "Seeking ESG · OHS · Environmental Engineer roles" },
+  // ▼ 연락처 — linkedin/github은 값이 비어 있으면 화면에 표시되지 않습니다.
+  //    링크드인 프로필을 만든 뒤 아래 linkedin에 전체 URL("https://www.linkedin.com/in/아이디")만 넣으면 자동으로 노출됩니다.
+  contact: {
+    email: "as7688@naver.com",
+    phone: "010-5586-1474",
+    linkedin: "",   // 예: "https://www.linkedin.com/in/geunjae-lee" (생성 후 입력)
+    github: ""      // 예: "https://github.com/사용자명" (있으면 입력)
+  },
   // 프로필 사진 경로 — 예: "assets/profile.jpg" (비워두면 사진 없음)
   photo: "assets/photo_nobg.png",
   theme: { accent: "#4A6741" }

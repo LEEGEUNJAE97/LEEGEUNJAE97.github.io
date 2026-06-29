@@ -69,6 +69,7 @@
     var fe = el("span", "en", "© " + year + " " + (CFG.name.en || "") + ". All rights reserved.");
     fe.hidden = true; f.appendChild(fk); f.appendChild(fe);
 
+
     // 연락처
     renderContact();
   }
@@ -116,7 +117,9 @@
         var sentences = text.split(". ").filter(Boolean);
         sentences.forEach(function (s, i) {
           var line = el("span", "about__sentence");
-          line.textContent = i < sentences.length - 1 ? s + "." : s;
+          var t = i < sentences.length - 1 ? s + "." : s;
+          var lsp = t.lastIndexOf(" ");
+          line.textContent = lsp === -1 ? t : t.slice(0, lsp) + " " + t.slice(lsp + 1);
           span.appendChild(line);
         });
         return span;
@@ -127,7 +130,7 @@
       container.appendChild(sentenceSpan(enText, "en"));
     })();
 
-    // 자기소개
+    // 자기소개 — \n\n 기준으로 단락 분리
     (function () {
       var container = $("#self-intro-content");
       (DATA.selfIntro || []).forEach(function (item) {
@@ -137,9 +140,15 @@
           bilingual(badge, item.title);
           card.appendChild(badge);
         }
-        var body = el("p", "self-intro__body");
-        bilingual(body, item.content || item);
-        card.appendChild(body);
+        var pair = item.content || item;
+        ["ko", "en"].forEach(function (lang) {
+          var text = (pair && pair[lang]) || "";
+          var outer = el("span", lang);
+          text.split("\n\n").filter(Boolean).forEach(function (para) {
+            outer.appendChild(el("p", "self-intro__body", para.trim()));
+          });
+          card.appendChild(outer);
+        });
         container.appendChild(card);
       });
     })();
@@ -184,12 +193,58 @@
     });
 
     // Certifications
-    var certs = $("#cert-list");
-    (DATA.certifications || []).forEach(function (c) { certs.appendChild(bilingual(el("li", "reveal"), c)); });
+    function renderCerts(container) {
+      (DATA.certifications || []).forEach(function (group) {
+        var section = el("div", "cert-group");
+        var tEn = (group.title && group.title.en) || "";
+        section.setAttribute("data-cat",
+          /EHS|Safety|Core/i.test(tEn) ? "ehs" :
+          /Digital|AI/i.test(tEn) ? "digital" :
+          /Language/i.test(tEn) ? "lang" : "other");
+        if (group.title) {
+          var h4 = el("h4", "cert-group__title");
+          bilingual(h4, group.title);
+          section.appendChild(h4);
+        }
+        var ul = el("ul", "cert-list");
+        (group.items || []).forEach(function (c) {
+          var li = el("li", "reveal");
+          bilingual(li, c);
+          if (c.desc) { var d = el("p", "cert-desc"); bilingual(d, c.desc); li.appendChild(d); }
+          if (c.date) { li.appendChild(el("p", "cert-date", c.date)); }
+          ul.appendChild(li);
+        });
+        section.appendChild(ul);
+        container.appendChild(section);
+      });
+    }
+    // 메인: 이름만 칩으로
+    function renderCertsCompact(container) {
+      (DATA.certifications || []).forEach(function (group) {
+        (group.items || []).forEach(function (c) {
+          container.appendChild(bilingual(el("li", "reveal"), c));
+        });
+      });
+    }
+    renderCertsCompact($("#cert-list"));
+    renderCerts($("#cert-list-tab"));
 
-    // Skills
-    var skills = $("#skill-list");
-    (DATA.skills || []).forEach(function (s) { skills.appendChild(bilingual(el("li", "reveal"), s)); });
+    // Skills / Tools — 메인: 칩(이름만), 탭: cert-list 스타일(이름+설명)
+    function renderChips(container, items) {
+      (items || []).forEach(function (item) { container.appendChild(bilingual(el("li", "reveal"), item)); });
+    }
+    function renderListWithDesc(container, items) {
+      (items || []).forEach(function (item) {
+        var li = el("li", "reveal");
+        bilingual(li, item);
+        if (item.desc) { var d = el("p", "cert-desc"); bilingual(d, item.desc); li.appendChild(d); }
+        container.appendChild(li);
+      });
+    }
+    renderChips($("#skill-list"), DATA.skills);
+    renderListWithDesc($("#skill-list-tab"), DATA.skills);
+    renderChips($("#tool-list"), DATA.tools);
+    renderListWithDesc($("#tool-list-tab"), DATA.tools);
 
     // Projects (있을 때만 섹션 노출)
     if (DATA.projects && DATA.projects.length) {
@@ -235,8 +290,8 @@
     });
   }
 
-  /* ---------- 4. 인쇄 ---------- */
-  function initPrint() { $("#print-btn").addEventListener("click", function () { window.print(); }); }
+  /* ---------- 4. (removed: 이메일 주소 복사) ---------- */
+  function initPrint() {}
 
   /* ---------- 5. 탭 내비게이션 (연혁·프로젝트만) ---------- */
   function initTabs() {
