@@ -2,6 +2,33 @@
 // resume.js — 경력·학력·자격증·역량·자기소개 등 이력 데이터
 // ============================================================
 window.RESUME_DATA = {
+  // ──────────────────────────────────────────────────────────
+  // 일하는 방식 — '일하는 방식' 섹션 카드만 여기서 수정하세요.
+  // tag: 초록색 핵심 역량 레이블  /  desc: 한 줄 설명
+  // ──────────────────────────────────────────────────────────
+  workStyle: [
+    {
+      tag:  { ko: "데이터 무결성", en: "Data Integrity" },
+      desc: { ko: "데이터 검증 절차 설계로 정합성을 확보하여, 외부 감사 지적 0건을 달성했습니다.", en: "Self-designed three-step verification: 0% error on KRW 100B/yr settlements, zero audit findings." }
+    },
+    {
+      tag:  { ko: "표준화 · 협업", en: "Standardization" },
+      desc: { ko: "차이를 형식·공정으로 이원화해 전국 8개 거점 표준화 기준을 세웠습니다.", en: "Split differences into format vs. process — embedded standards across 8 sites without field resistance." }
+    },
+    {
+      tag:  { ko: "이해관계자 소통", en: "Communication" },
+      desc: { ko: "한국환경공단, 감사원 등 대관 업무를 수행하고, 국가기관 제도 설명회 단독 연사 10회 참석으로 신규 가입 310건을 달성했습니다.", en: "Reordered by workflow, not statute — 10 solo briefings, 310 new enrollments in 3 months." }
+    },
+    {
+      tag:  { ko: "내·외부 시각", en: "Dual Perspective" },
+      desc: { ko: "법정 보건관리자와 외부 EHS 진단자를 모두 경험해 내부 사각지대를 선제적으로 관리합니다.", en: "Statutory H&S Manager inside, external EHS auditor outside — blind spots caught before they surface." }
+    },
+    {
+      tag:  { ko: "리스크 차단 체계", en: "Risk Prevention" },
+      desc: { ko: "점검 항목을 법적 리스크 수준으로 분류해 외부 지적 전에 선제 차단합니다.", en: "Classify inspection items by legal risk level and block findings before any external review." }
+    }
+  ],
+
   about: {
     ko: "보건관리자와 EHS 외부 점검자 및 ESG 성과 지원으로, 내부 실행과 외부 규제 진단 양 방면의 경험을 쌓은 EHS·ESG 실무자입니다. 동희산업에서 전국 8개 제조 공장·연구소의 유해인자 관리·ISO 45001 문서 표준화를 본사에서 통합 관리했고,\n이순환거버넌스에서는 1,400여 개 회원사의 ESG 활동 지원과 연 1,000억 원 규모의 분담금 데이터 정산을 통해 외부 감사 지적 0건을 유지했을 뿐만 아니라,\n55개 재활용 사업회원사의 EHS 현장 점검 및 컨설팅까지 아우르며 수행했습니다. 리스크를 구조적으로 차단하는 체계를 직접 설계하겠습니다.",
     en: "An EHS/ESG professional who has operated as both an internal statutory Health & Safety Manager and an external EHS auditor — combining on-the-ground execution with regulatory diagnostic expertise. At Donghee Industry, I unified hazardous factor management and ISO 45001 documentation across 8 national manufacturing sites under a single headquarters-led framework; at E-Soonhwan Governance, I supported ESG compliance for ~1,400 member companies and managed KRW 100B in annual levy settlements with a 0% error rate and zero external audit findings. I also conducted on-site EHS inspections and provided tailored improvement consulting across 55 recycling member sites. My approach is to design structures that intercept risk before it materializes."
@@ -12,6 +39,11 @@ window.RESUME_DATA = {
       note: { ko: "환경부 산하 비영리 공익법인 · 환경성보장제도 운영 공제조합", en: "Non-profit public corporation under MoE · mutual-aid cooperative operating Korea's EPR system" },
       title: { ko: "공제센터 관리팀 선임 (ESG · 환경)", en: "Senior, Mutual-Aid Center Management Team (ESG · Environmental)" },
       period: "2023.09 – 2026.03 · 2년 7개월",
+      preview: [
+        { ko: "회원사 ESG 성과 제공 및 규제 대응 지원", en: "ESG performance support & regulatory response for member companies" },
+        { ko: "재직 기간 내 외부 감사 데이터 불일치 지적 0건 (2년 7개월 연속)", en: "Zero audit data-discrepancy findings for 31 months" },
+        { ko: "재활용 사업장 EHS 점검 및 컴플라이언스 지원", en: "EHS inspection & compliance support for recycling sites" }
+      ],
       groups: [
         {
           label: { ko: "1. ESG 데이터 관리 및 분담금 운영", en: "1. ESG Data Management & Levy Operations" },

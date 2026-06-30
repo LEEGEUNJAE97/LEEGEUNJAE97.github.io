@@ -3,7 +3,7 @@
 // ============================================================
 window.SITE_CONFIG = {
   // ▼ 홈페이지 편집 모드에서 자유롭게 수정하는 영역
-  name: { ko: "이근재", en: "Geunjae Lee" },
+  name: { ko: "이근재", en: "GEUNJAE LEE" },
   headline: {
     ko: "규제의 내외부 경험으로 리스크를 선제적으로 관리하여,\n지속 가능한 성장을 기획하겠습니다.",
     en: "Building complete ESG systems — diagnosing from outside, executing from within."

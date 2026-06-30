@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>이근재 · 환경안전(EHS) · ESG · SHE 이력서</title>
+  <title>이근재 · 이력서 · EHS · ESG</title>
 
-  <!-- ▼ SEO 메타태그 -->
-  <meta name="description" content="환경·안전(EHS) 데이터를 신뢰할 수 있게 만드는 사람 — ESG · SHE · EHS 직무 이력서 및 포트폴리오." />
+  <meta name="description" content="환경·안전(EHS)·ESG 실무자 이근재의 온라인 이력서. 내부 실행과 외부 진단 양 방면 경험을 바탕으로 한 리스크 관리 기획." />
   <meta name="author" content="이근재" />
+  <meta name="robots" content="index, follow" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="이근재 · 환경안전(EHS) · ESG · SHE 이력서" />
-  <meta property="og:description" content="환경 인허가 · EHS 점검 · 데이터 교차검증 실무 경력. ESG · SHE · EHS 직무 지원." />
+  <meta property="og:title" content="이근재 · 이력서" />
+  <meta property="og:description" content="EHS·ESG 실무자. 데이터 무결성·리스크 차단 체계·다거점 표준화 경험." />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:image" content="assets/photo_nobg.png" />
@@ -19,125 +19,109 @@
   <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org Person — AI browser / search readability -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "이근재",
+    "alternateName": "Geunjae Lee",
+    "email": "mailto:as7688@naver.com",
+    "telephone": "+82-10-5586-1474",
+    "image": "assets/photo_nobg.png",
+    "jobTitle": "EHS · ESG Practitioner",
+    "description": "환경·안전(EHS)·ESG 실무자. 내부 실행과 외부 규제 진단 양쪽의 경험을 보유.",
+    "knowsAbout": [
+      "EHS Compliance", "ESG Data Management", "ISO 14001", "ISO 45001",
+      "Industrial Safety", "Chemicals Control Act", "Risk Assessment",
+      "Supply Chain ESG", "Environmental Permitting"
+    ],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "대기환경기사" },
+      { "@type": "EducationalOccupationalCredential", "name": "산업안전산업기사" },
+      { "@type": "EducationalOccupationalCredential", "name": "ESG공급망평가관리사" },
+      { "@type": "EducationalOccupationalCredential", "name": "AICE Basic" }
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "명지대학교",
+      "department": "환경에너지공학과"
+    },
+    "worksFor": [
+      { "@type": "Organization", "name": "이순환거버넌스" },
+      { "@type": "Organization", "name": "동희산업" }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- 건너뛰기 링크(접근성) -->
-  <a href="#about" class="skip-link" data-i18n="ko">본문 바로가기</a>
-  <a href="#about" class="skip-link" data-i18n="en" hidden>Skip to content</a>
+  <a href="#main" class="skip-link"><span class="ko">본문 바로가기</span><span class="en" hidden>Skip to content</span></a>
 
-  <!-- ====================== 상단 고정 헤더 ====================== -->
+  <!-- ====================== Header ====================== -->
   <header class="site-header" role="banner">
     <nav class="nav" aria-label="주 내비게이션">
-      <a href="#hero" class="nav__brand" id="nav-brand"></a>
-
       <ul class="nav__links" id="nav-links">
-        <li><a href="#history"><span class="ko">연혁</span><span class="en" hidden>Timeline</span></a></li>
-        <li><a href="#skills-tab"><span class="ko">자격/역량</span><span class="en" hidden>Qualifications &amp; Skills</span></a></li>
-        <li><a href="#activities"><span class="ko">교육/활동</span><span class="en" hidden>Training &amp; Volunteering</span></a></li>
-        <li><a href="#self-intro"><span class="ko">자기소개</span><span class="en" hidden>About Me</span></a></li>
-        <li class="nav__projects-li" hidden><a href="#projects"><span class="ko">프로젝트</span><span class="en" hidden>Projects</span></a></li>
+        <li><a href="#hero" class="nav__brand" id="nav-brand"></a></li>
+        <li><a href="#activities"><span class="ko">교육 · 활동</span><span class="en" hidden>Training</span></a></li>
+        <li><a href="#projects"><span class="ko">프로젝트</span><span class="en" hidden>Projects</span></a></li>
+        <li><a href="#self-intro"><span class="ko">자기소개</span><span class="en" hidden>Intro</span></a></li>
       </ul>
-
       <div class="nav__actions">
-        <!-- 언어 토글 -->
-        <button type="button" id="lang-toggle" class="btn btn--ghost" aria-pressed="false" title="한국어 / English">
+        <button type="button" id="lang-toggle" class="btn btn--ghost btn--sm" aria-pressed="false" title="한국어 / English">
           <span class="ko">EN</span><span class="en" hidden>KO</span>
         </button>
       </div>
     </nav>
-
   </header>
 
-  <main>
+  <main id="main">
     <!-- ====================== Hero ====================== -->
-    <section id="hero" class="hero">
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <p class="hero__eyebrow" id="hero-subtitle"></p>
-          <h1 class="hero__name" id="hero-name"></h1>
-          <p class="hero__headline" id="hero-headline"></p>
-          <div class="hero__cta">
-            <a href="#contact" class="btn btn--accent">
-              <span class="ko">연락처</span><span class="en" hidden>Contact</span>
-            </a>
+    <section id="hero" class="hero" aria-labelledby="hero-name">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__text">
+            <p class="hero__eyebrow" id="hero-subtitle"></p>
+            <h1 class="hero__name" id="hero-name"></h1>
+            <p class="hero__headline" id="hero-headline"></p>
+            <div class="hero__meta" id="hero-meta"></div>
+            <div class="hero__cta" id="hero-cta"></div>
+          </div>
+          <div class="hero__photo" id="hero-photo" hidden>
+            <img id="hero-photo-img" alt="프로필 사진" />
           </div>
         </div>
-        <div class="hero__photo" id="hero-photo" hidden>
-          <img id="hero-photo-img" alt="프로필 사진" />
-        </div>
       </div>
     </section>
 
-    <!-- ====================== About (메인 페이지) ====================== -->
-    <section id="about" class="page-block">
+    <!-- ====================== About — Bento Grid ====================== -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
       <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">소개</span><span class="en" hidden>About</span></h2>
-        </div>
-        <p class="about__text" id="about-text"></p>
-      </div>
-    </section>
-
-    <!-- ====================== Certifications & Skills (메인 페이지 — 컴팩트) ====================== -->
-    <section id="skills" class="page-block page-block--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">자격증 &amp; 역량</span><span class="en" hidden>Certifications &amp; Skills</span></h2>
-          <a href="#skills-tab" class="btn btn--ghost btn--sm"><span class="ko">자세히 보기 →</span><span class="en" hidden>See details →</span></a>
-        </div>
-        <div class="skills-compact">
+        <header class="section__head">
           <div>
-            <h3 class="subhead"><span class="ko">자격증</span><span class="en" hidden>Certifications</span></h3>
-            <ul class="chips" id="cert-list"></ul>
+            <span class="section__eyebrow">About</span>
+            <h2 class="section__title" id="about-title">
+              <span class="ko">일의 기준</span>
+              <span class="en" hidden>How I work</span>
+            </h2>
           </div>
+        </header>
+        <div class="bento bento--strengths" id="about-bento" role="list"></div>
+      </div>
+    </section>
+
+    <!-- ====================== Skills & Certifications ====================== -->
+    <section id="skills" class="section section--alt" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head">
           <div>
-            <h3 class="subhead"><span class="ko">핵심 역량</span><span class="en" hidden>Core Skills</span></h3>
-            <ul class="chips" id="skill-list"></ul>
+            <span class="section__eyebrow">Skills</span>
+            <h2 class="section__title" id="skills-title">
+              <span class="ko">자격 · 역량 · 도구</span>
+              <span class="en" hidden>Credentials, Skills &amp; Tools</span>
+            </h2>
           </div>
-          <div>
-            <h3 class="subhead"><span class="ko">사용 툴 · 시스템</span><span class="en" hidden>Tools &amp; Systems</span></h3>
-            <ul class="chips" id="tool-list"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== Contact (메인 페이지) ====================== -->
-    <section id="contact" class="page-block">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">연락처</span><span class="en" hidden>Contact</span></h2>
-        </div>
-        <ul class="contact-list" id="contact-list"></ul>
-      </div>
-    </section>
-
-    <!-- ====================== 자기소개 (탭) ====================== -->
-    <section id="self-intro" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">자기소개</span><span class="en" hidden>About Me</span></h2>
-        </div>
-        <div id="self-intro-content" class="timeline"></div>
-      </div>
-    </section>
-
-    <!-- ====================== 연혁 (경력 + 학력 통합 탭) ====================== -->
-    <section id="history" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">연혁</span><span class="en" hidden>Timeline</span></h2>
-        </div>
-        <div class="timeline" id="history-list"></div>
-      </div>
-    </section>
-
-    <!-- ====================== 자격/역량 (탭) ====================== -->
-    <section id="skills-tab" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">자격/역량</span><span class="en" hidden>Qualifications &amp; Skills</span></h2>
-        </div>
+        </header>
         <div class="skills-grid">
           <div class="skills-grid__certs">
             <h3 class="subhead"><span class="ko">자격증</span><span class="en" hidden>Certifications</span></h3>
@@ -148,41 +132,101 @@
             <ul class="skill-card-grid" id="skill-list-tab"></ul>
           </div>
           <div>
-            <h3 class="subhead"><span class="ko">사용 툴 · 시스템</span><span class="en" hidden>Tools &amp; Systems</span></h3>
+            <h3 class="subhead"><span class="ko">사용 도구 · 시스템</span><span class="en" hidden>Tools &amp; Systems</span></h3>
             <ul class="skill-card-grid" id="tool-list-tab"></ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================== 교육/활동 (탭) ====================== -->
-    <section id="activities" class="section">
+    <!-- ====================== Timeline ====================== -->
+    <section id="history" class="section" aria-labelledby="history-title">
       <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">교육/활동</span><span class="en" hidden>Training &amp; Volunteering</span></h2>
-        </div>
+        <header class="section__head">
+          <div>
+            <span class="section__eyebrow">Timeline</span>
+            <h2 class="section__title" id="history-title">
+              <span class="ko">경력 · 학력</span>
+              <span class="en" hidden>Experience &amp; Education</span>
+            </h2>
+          </div>
+        </header>
+        <div class="timeline" id="history-list"></div>
+      </div>
+    </section>
+
+    <!-- ====================== Contact ====================== -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__head">
+          <div>
+            <span class="section__eyebrow">Contact</span>
+            <h2 class="section__title" id="contact-title">
+              <span class="ko">연락처</span><span class="en" hidden>Get in touch</span>
+            </h2>
+          </div>
+        </header>
+        <address class="contact-card">
+          <ul class="contact-list" id="contact-list"></ul>
+        </address>
+      </div>
+    </section>
+
+    <!-- ====================== Self-Intro Full ====================== -->
+    <section id="self-intro" class="section section--alt" aria-labelledby="si-title">
+      <div class="container">
+        <header class="section__head">
+          <div>
+            <span class="section__eyebrow">Self-Introduction</span>
+            <h2 class="section__title" id="si-title">
+              <span class="ko">자기소개 — 상세</span>
+              <span class="en" hidden>Self-Introduction in Depth</span>
+            </h2>
+          </div>
+        </header>
+        <div class="si-stack" id="self-intro-content"></div>
+      </div>
+    </section>
+
+    <!-- ====================== Activities ====================== -->
+    <section id="activities" class="section" aria-labelledby="act-title">
+      <div class="container">
+        <header class="section__head">
+          <div>
+            <span class="section__eyebrow">Training</span>
+            <h2 class="section__title" id="act-title">
+              <span class="ko">교육 · 활동</span>
+              <span class="en" hidden>Training &amp; Volunteering</span>
+            </h2>
+          </div>
+        </header>
         <div class="timeline" id="activities-list"></div>
       </div>
     </section>
 
-    <!-- ====================== Projects (있을 때만) ====================== -->
-    <section id="projects" class="section" hidden>
+    <!-- ====================== Projects ====================== -->
+    <section id="projects" class="section section--alt" aria-labelledby="proj-title">
       <div class="container">
-        <div class="section__head">
-          <h2 class="section__title"><span class="ko">프로젝트</span><span class="en" hidden>Projects</span></h2>
-        </div>
+        <header class="section__head">
+          <div>
+            <span class="section__eyebrow">Projects</span>
+            <h2 class="section__title" id="proj-title">
+              <span class="ko">프로젝트</span>
+              <span class="en" hidden>Projects</span>
+            </h2>
+          </div>
+        </header>
         <div class="timeline" id="projects-list"></div>
       </div>
     </section>
   </main>
 
   <noscript>
-    <style>.hero,.page-block,.section{display:none}</style>
     <div style="font-family:sans-serif;max-width:600px;margin:60px auto;padding:0 20px;line-height:1.7">
       <h1>이근재 · Geunjae Lee</h1>
       <p>EHS · ESG 실무자</p>
       <p>📧 as7688@naver.com · 📞 010-5586-1474</p>
-      <p style="color:#666;font-size:.9em">이 페이지는 JavaScript가 필요합니다. 브라우저 설정에서 스크립트를 허용해 주세요.</p>
+      <p style="color:#666;font-size:.9em">이 페이지는 JavaScript가 필요합니다.</p>
     </div>
   </noscript>
 
@@ -192,10 +236,8 @@
     </div>
   </footer>
 
-
-  <!-- 데이터는 fetch가 아니라 <script src>로 불러와 file:// 에서도 동작 -->
-  <script src="data/site-config.js"></script>
-  <script src="data/resume.js"></script>
-  <script src="js/main.js"></script>
+  <script src="data/site-config.js?v=2"></script>
+  <script src="data/resume.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
