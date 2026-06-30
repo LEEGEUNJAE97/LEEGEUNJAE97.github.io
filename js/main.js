@@ -30,9 +30,11 @@
 
   /* ---------- 0. 테마 컬러 주입 ---------- */
   function applyTheme() {
-    var accent = (CFG.theme && CFG.theme.accent) || "#2f7d5b";
+    var accent = (CFG.theme && CFG.theme.accent) || "#4A6741";
+    document.documentElement.style.setProperty("--primary", accent);
+    document.documentElement.style.setProperty("--primary-dark", shade(accent, -0.18));
+    document.documentElement.style.setProperty("--primary-soft", shade(accent, 0.86));
     document.documentElement.style.setProperty("--accent", accent);
-    // 약간 어두운 변형을 자동 계산 (간단한 mix)
     document.documentElement.style.setProperty("--accent-dark", shade(accent, -0.18));
     document.documentElement.style.setProperty("--accent-soft", shade(accent, 0.86));
   }
@@ -118,8 +120,11 @@
         sentences.forEach(function (s, i) {
           var line = el("span", "about__sentence");
           var t = i < sentences.length - 1 ? s + "." : s;
-          var lsp = t.lastIndexOf(" ");
-          line.textContent = lsp === -1 ? t : t.slice(0, lsp) + " " + t.slice(lsp + 1);
+          t.split("\n").forEach(function(part, pi) {
+            if (pi > 0) line.appendChild(document.createElement("br"));
+            var lsp = part.lastIndexOf(" ");
+            line.appendChild(document.createTextNode(lsp === -1 ? part : part.slice(0, lsp) + " " + part.slice(lsp + 1)));
+          });
           span.appendChild(line);
         });
         return span;
@@ -168,9 +173,9 @@
       card.appendChild(badge);
       var top = el("div", "card__top");
       var titleWrap = el("div");
+      var comp = el("div", "card__company"); bilingual(comp, job.company); titleWrap.appendChild(comp);
       var h3 = el("h3", "card__title");
       bilingual(h3, job.title); titleWrap.appendChild(h3);
-      var comp = el("div", "card__company"); bilingual(comp, job.company); titleWrap.appendChild(comp);
       if (job.note) { var note = el("div", "card__sub"); bilingual(note, job.note); titleWrap.appendChild(note); }
       top.appendChild(titleWrap);
       top.appendChild(el("span", "card__period", job.period || ""));

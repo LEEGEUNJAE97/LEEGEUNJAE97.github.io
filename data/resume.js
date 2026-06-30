@@ -3,8 +3,8 @@
 // ============================================================
 window.RESUME_DATA = {
   about: {
-    ko: "법정 보건관리자와 EHS 외부 점검자로 안전보건 실무를 수행하며, 내부 실행과 외부 규제 진단 양 방면의 경험을 쌓은 EHS·ESG 실무자입니다. 동희산업에서 전국 8개 제조 공장·연구소의 유해인자 관리·ISO 45001 문서 표준화를 본사에서 통합 관리했고, 이순환거버넌스에서는 회원사 55개 사업장 EHS 현장점검과 연 1,000억 원 규모 분담금 데이터 정산을 수행하며 외부 감사 지적 0건을 유지했습니다. 규정을 따르는 데 그치지 않고 오차를 구조적으로 차단하는 체계를 직접 설계해 왔습니다.",
-    en: "An EHS/ESG practitioner who has served as both a statutory Health & Safety Manager (internal executor) and an EHS auditor (external diagnoser). At Donghee Industry I centrally managed hazardous factor control and ISO 45001 documentation across 8 manufacturing plants and labs nationwide; at E-Soonhwan Governance I conducted on-site EHS inspections at 55 member sites and settled ~KRW 100B in annual recycling levies with zero external audit findings. Rather than simply meeting regulations, I design structures that prevent errors at the source."
+    ko: "보건관리자와 EHS 외부 점검자 및 ESG 성과 지원으로, 내부 실행과 외부 규제 진단 양 방면의 경험을 쌓은 EHS·ESG 실무자입니다. 동희산업에서 전국 8개 제조 공장·연구소의 유해인자 관리·ISO 45001 문서 표준화를 본사에서 통합 관리했고,\n이순환거버넌스에서는 1,400여 개 회원사의 ESG 활동 지원과 연 1,000억 원 규모의 분담금 데이터 정산을 통해 외부 감사 지적 0건을 유지했을 뿐만 아니라,\n55개 재활용 사업회원사의 EHS 현장 점검 및 컨설팅까지 아우르며 수행했습니다. 리스크를 구조적으로 차단하는 체계를 직접 설계하겠습니다.",
+    en: "An EHS/ESG professional who has operated as both an internal statutory Health & Safety Manager and an external EHS auditor — combining on-the-ground execution with regulatory diagnostic expertise. At Donghee Industry, I unified hazardous factor management and ISO 45001 documentation across 8 national manufacturing sites under a single headquarters-led framework; at E-Soonhwan Governance, I supported ESG compliance for ~1,400 member companies and managed KRW 100B in annual levy settlements with a 0% error rate and zero external audit findings. I also conducted on-site EHS inspections and provided tailored improvement consulting across 55 recycling member sites. My approach is to design structures that intercept risk before it materializes."
   },
   experience: [
     {
