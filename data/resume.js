@@ -240,7 +240,7 @@ window.RESUME_DATA = {
     {
       type: { ko: "프로세스 재설계·리스크 분류", en: "Process Redesign · Risk Classification" },
       company: { ko: "동희산업", en: "Donghee Industry" },
-      title: { ko: "리스크 수준 기반 점검 기준 재설계 — 외부 점검 지적 0건", en: "Inspection Criteria Redesign by Risk Level — Zero External Findings" },
+      title: { ko: "안전 점검 체크리스트 이원화 개편", en: "Two-Tier Safety Checklist Redesign" },
       period: "2023.02 – 2023.08",
       highlights: [
         { ko: "기존 체크리스트가 서류 유무만 확인하고 절차의 실제 운영 여부는 식별하지 못한다는 구조적 문제를 진단", en: "Diagnosed the structural flaw: checklists verified document existence but not whether procedures actually ran" },
@@ -252,7 +252,7 @@ window.RESUME_DATA = {
     {
       type: { ko: "표준화·다거점 협업", en: "Standardization & Multi-site Collaboration" },
       company: { ko: "동희산업", en: "Donghee Industry" },
-      title: { ko: "다거점 문서 표준화 주도 — 현장 저항 없이 전국 8개 거점 기준 정착", en: "Multi-site Documentation Standardization — Standards That Stuck Across 8 Sites Without Field Resistance" },
+      title: { ko: "전국 8개 거점 문서 표준화 주도", en: "Multi-site Documentation Standardization Across 8 Locations" },
       period: "2023.02 – 2023.08",
       highlights: [
         { ko: "차이를 '형식만 다른 경우(통합 대상)'와 '공정이 실제로 다른 경우(예외 관리)'로 이원화해 표준과 예외의 경계를 명확화", en: "Split differences into 'format-only (merge)' and 'process-actual (manage as exception)' for a clear boundary" },
@@ -262,9 +262,9 @@ window.RESUME_DATA = {
       ]
     },
     {
-      type: { ko: "데이터 무결성", en: "Data Integrity" },
+      type: { ko: "정산 데이터 검증", en: "Settlement Data Verification" },
       company: { ko: "이순환거버넌스", en: "E-Soonhwan Governance" },
-      title: { ko: "재활용 분담금 3단계 교차검증 체계 설계 — 오차율 0%, 감사 지적 0건", en: "Three-Step Cross-Verification System — 0% Error, Zero Audit Findings" },
+      title: { ko: "재활용 분담금 3단계 교차검증 체계 설계", en: "Three-Step Cross-Verification System for Levy Settlement" },
       period: "2023.09 – 2026.03",
       highlights: [
         { ko: "신고량→의무량→단가 적용의 누적 구조에서 한 단계 오류가 다음 단계로 전이되는 구조적 리스크를 파악", en: "Identified that errors propagate through the cumulative reported-volume → obligation → unit-rate calculation" },
@@ -275,7 +275,7 @@ window.RESUME_DATA = {
     {
       type: { ko: "이해관계자 커뮤니케이션", en: "Stakeholder Communication" },
       company: { ko: "이순환거버넌스 · 한국환경공단 주관", en: "E-Soonhwan Governance · hosted by K-eco" },
-      title: { ko: "복잡한 제도를 업무 흐름으로 재구성 — 단독 연사 10회, 신규 가입 310건", en: "Restructuring Complex Rules Around the Audience's Workflow — 10 Solo Briefings, 310 New Enrollments" },
+      title: { ko: "환경성보장제도 설명회 단독 연사", en: "Solo Speaker, EPR Briefing Series" },
       period: "2023.09 – 2026.03",
       highlights: [
         { ko: "법 조문 순서 대신 기업이 실제로 거치는 업무 흐름(가입→분담금 산정→정산) 순서로 설명을 재배열", en: "Reordered the briefing to follow the workflow companies actually take — enrollment, levy calculation, settlement" },
