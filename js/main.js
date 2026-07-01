@@ -474,9 +474,9 @@
 
     // 자기소개·교육·프로젝트 → 홈뷰 전용 아이콘 quicknav
     var quickItems = [
-      { id: "self-intro", icon: "자기소개", ko: "자기소개",  en: "Intro" },
+      { id: "projects",   icon: "프로젝트", ko: "프로젝트",  en: "Projects" },
       { id: "activities", icon: "교육활동", ko: "교육 · 활동", en: "Training" },
-      { id: "projects",   icon: "프로젝트", ko: "프로젝트",  en: "Projects" }
+      { id: "self-intro", icon: "자기소개", ko: "자기소개",  en: "Intro" }
     ];
     var qnav = el("div", "home-quicknav");
     quickItems.forEach(function (item) {
