@@ -168,6 +168,13 @@ window.RESUME_DATA = {
   // 자격증: 직무 관련성 순으로 그룹화. items 각각 ko/en/date/desc.
   certifications: [
     {
+      title: { ko: "어학", en: "Language" },
+      items: [
+        { ko: "OPIc IH · 영어", en: "OPIc IH · English", date: "2026.04",
+          desc: { ko: "영문 ESG 검토·글로벌 소통", en: "English ESG review & global communication" } }
+      ]
+    },
+    {
       title: { ko: "환경·안전 (직무 핵심)", en: "EHS · Safety (Core)" },
       items: [
         { ko: "대기환경기사", en: "Air Pollution Environmental Engineer", date: "2021.12",
@@ -184,16 +191,9 @@ window.RESUME_DATA = {
         { ko: "AICE Basic", en: "AICE Basic", date: "2026.04",
           desc: { ko: "AI 활용·업무 자동화", en: "AI tools & workflow automation" } },
         { ko: "컴퓨터활용능력 1급", en: "Computer Specialist Lv.1", date: "2022.08",
-          desc: { ko: "Excel 분담금 산정·교차검증", en: "Excel levy calculation & cross-verification" } },
+          desc: { ko: "데이터 정리·분석 및 OA 실무 활용", en: "Data organization/analysis & OA proficiency" } },
         { ko: "워드프로세서 3급", en: "Word Processor Lv.3", date: "2008.03",
           desc: { ko: "공문서·보고서 서식 작성", en: "Official documents & report formatting" } }
-      ]
-    },
-    {
-      title: { ko: "어학", en: "Language" },
-      items: [
-        { ko: "OPIc IH · 영어", en: "OPIc IH · English", date: "2026.04",
-          desc: { ko: "영문 ESG 검토·글로벌 소통", en: "English ESG review & global communication" } }
       ]
     },
     {
@@ -243,9 +243,9 @@ window.RESUME_DATA = {
       title: { ko: "안전 점검 체크리스트 이원화 개편", en: "Two-Tier Safety Checklist Redesign" },
       period: "2023.02 – 2023.08",
       highlights: [
+        { ko: "과기정통부 주관 연구실 안전 현장점검에서 과태료 지적사항 0건 달성", en: "Zero penalty findings in the MSIT on-site lab safety inspection" },
         { ko: "기존 체크리스트가 서류 유무만 확인하고 절차의 실제 운영 여부는 식별하지 못한다는 구조적 문제를 진단", en: "Diagnosed the structural flaw: checklists verified document existence but not whether procedures actually ran" },
         { ko: "점검 항목을 '미실시(절차 미수립 → 즉시 문서화 최우선)'와 '미흡(절차는 있으나 운영 불완전 → 이행 근거 확보)'으로 이원화해 우선순위 구조화", en: "Two-tier classification — 'not implemented' (establish immediately) and 'incomplete' (secure execution evidence)" },
-        { ko: "과기정통부 주관 연구실 안전 현장점검에서 과태료 지적사항 0건 달성", en: "Zero penalty findings in the MSIT on-site lab safety inspection" },
         { ko: "같은 분류 기준을 공장 유해인자 순회점검 체크리스트에 확대 적용해 대응 우선순위 정비", en: "Extended the same framework to plant hazard patrol checklists, restructuring response priorities" }
       ]
     },
@@ -255,10 +255,10 @@ window.RESUME_DATA = {
       title: { ko: "전국 8개 거점 문서 표준화 주도", en: "Multi-site Documentation Standardization Across 8 Locations" },
       period: "2023.02 – 2023.08",
       highlights: [
+        { ko: "취급 화학물질(MSDS) 전수 조사·경고표지 현행화로 화관법 대응 기초 확립", en: "Full MSDS audit and label updates established the Chemicals Control Act foundation" },
         { ko: "차이를 '형식만 다른 경우(통합 대상)'와 '공정이 실제로 다른 경우(예외 관리)'로 이원화해 표준과 예외의 경계를 명확화", en: "Split differences into 'format-only (merge)' and 'process-actual (manage as exception)' for a clear boundary" },
         { ko: "8개 공장 담당자가 매일 이슈를 공유하는 전사 메신저 채널을 개설해 개선 사례 수평전개 구조 정착", en: "Built a real-time messenger channel for all 8 plant leads — daily horizontal rollout of improvements" },
-        { ko: "중대재해처벌법 시행 초기 본사 Control Tower로서 현장과 경영진을 연결하고 리스크 분석 체계 수립", en: "Served as HQ control tower during early SAPA rollout, bridging sites and leadership and building the risk-analysis framework" },
-        { ko: "취급 화학물질(MSDS) 전수 조사·경고표지 현행화로 화관법 대응 기초 확립", en: "Full MSDS audit and label updates established the Chemicals Control Act foundation" }
+        { ko: "중대재해처벌법 시행 초기 본사 Control Tower로서 현장과 경영진을 연결하고 리스크 분석 체계 수립", en: "Served as HQ control tower during early SAPA rollout, bridging sites and leadership and building the risk-analysis framework" }
       ]
     },
     {
@@ -267,9 +267,9 @@ window.RESUME_DATA = {
       title: { ko: "재활용 분담금 3단계 교차검증 체계 설계", en: "Three-Step Cross-Verification System for Levy Settlement" },
       period: "2023.09 – 2026.03",
       highlights: [
+        { ko: "연 1,000억 원 규모 정산에서 오차율 0%, 외부 감사 데이터 불일치 지적 0건 (2년 7개월 연속) 달성", en: "0% error on ~KRW 100B/yr settlements; zero audit data-discrepancy findings for 31 straight months" },
         { ko: "신고량→의무량→단가 적용의 누적 구조에서 한 단계 오류가 다음 단계로 전이되는 구조적 리스크를 파악", en: "Identified that errors propagate through the cumulative reported-volume → obligation → unit-rate calculation" },
-        { ko: "신고 총중량 대조 → 품목군 기준치 이탈 → 과년도 3개년 평균 대조의 3단계 검증을 수립", en: "Established three sequential checks: total-weight reconciliation, item-group threshold screening, 3-year historical average" },
-        { ko: "연 1,000억 원 규모 정산에서 오차율 0%, 외부 감사 데이터 불일치 지적 0건 (2년 7개월 연속) 달성", en: "0% error on ~KRW 100B/yr settlements; zero audit data-discrepancy findings for 31 straight months" }
+        { ko: "신고 총중량 대조 → 품목군 기준치 이탈 → 과년도 3개년 평균 대조의 3단계 검증을 수립", en: "Established three sequential checks: total-weight reconciliation, item-group threshold screening, 3-year historical average" }
       ]
     },
     {
@@ -278,9 +278,9 @@ window.RESUME_DATA = {
       title: { ko: "환경성보장제도 설명회 단독 연사", en: "Solo Speaker, EPR Briefing Series" },
       period: "2023.09 – 2026.03",
       highlights: [
+        { ko: "회당 최대 400명 대상 10회 수행 — 3개월 만에 설립 10년간 누적 회원사의 약 22%에 해당하는 신규 가입 310건 달성", en: "10 sessions to up to 400 attendees each — 310 new enrollments in 3 months (~22% of 10 years' cumulative members)" },
         { ko: "법 조문 순서 대신 기업이 실제로 거치는 업무 흐름(가입→분담금 산정→정산) 순서로 설명을 재배열", en: "Reordered the briefing to follow the workflow companies actually take — enrollment, levy calculation, settlement" },
-        { ko: "회차마다 반복되는 질문 패턴을 기록해 다음 회차 앞쪽에 선제 배치, 법령 개정 시 즉시 반영", en: "Logged recurring questions each session, moved them to the opening of the next, reflected amendments immediately" },
-        { ko: "회당 최대 400명 대상 10회 수행 — 3개월 만에 설립 10년간 누적 회원사의 약 22%에 해당하는 신규 가입 310건 달성", en: "10 sessions to up to 400 attendees each — 310 new enrollments in 3 months (~22% of 10 years' cumulative members)" }
+        { ko: "회차마다 반복되는 질문 패턴을 기록해 다음 회차 앞쪽에 선제 배치, 법령 개정 시 즉시 반영", en: "Logged recurring questions each session, moved them to the opening of the next, reflected amendments immediately" }
       ]
     },
     {
@@ -292,7 +292,7 @@ window.RESUME_DATA = {
         { ko: "코딩 비전공 상태에서 AICE Basic으로 AI 기본기를 다지고 업무에서 직접 필요한 도구를 제작하는 방식으로 접근", en: "As a non-CS background, grounded with AICE Basic before building the tools I actually needed at work" },
         { ko: "수작업 취합 병목 해소를 위해 여러 출처 데이터를 한 화면에 통합·비교하는 프로그램 개발 및 실사용", en: "Built a multi-source data consolidation/comparison tool that resolves the manual aggregation bottleneck — in daily use" },
         { ko: "운동 기록을 자동으로 추천하는 일지 앱 개발 — 자동화 접근을 개인 영역에 동일하게 적용", en: "Developed a workout-log app with auto-recommendation — same automation approach applied personally" },
-        { ko: "국내외 주식·크립토 워치리스트 기반 투자 정보 앱 개발 (macOS SwiftUI + FastAPI) — 기술적·기본적 분석 및 RSI·MACD 조건 알림 기능 포함", en: "Built an investment analysis app (macOS SwiftUI + FastAPI) — watchlist-based tracking of domestic/overseas stocks and crypto with technical/fundamental analysis and RSI·MACD condition alerts" }
+        { ko: "주식·크립토 투자 정보 앱 개발 (SwiftUI + FastAPI) — 기술·기본 분석 및 RSI·MACD 알림", en: "Built an investment app (SwiftUI + FastAPI) — technical/fundamental analysis and RSI·MACD alerts" }
       ]
     }
   ],
@@ -342,7 +342,7 @@ window.RESUME_DATA = {
       ]
     },
     {
-      kind: { ko: "자원봉사", en: "Volunteering" },
+      kind: { ko: "봉사활동", en: "Volunteering" },
       org: { ko: "한국로하스협회 · 행정안전부", en: "Korea LOHAS Association · MOIS" },
       title: { ko: "2020년 일회용플라스틱다이어트챌린지 (팀장)", en: "2020 Single-Use Plastic Diet Challenge (Team Lead)" },
       period: "2020.07 – 2020.11 · 5개월",
@@ -353,7 +353,7 @@ window.RESUME_DATA = {
       ]
     },
     {
-      kind: { ko: "자원봉사", en: "Volunteering" },
+      kind: { ko: "봉사활동", en: "Volunteering" },
       org: { ko: "환경재단", en: "Korea Green Foundation" },
       title: { ko: "제17회 서울환경영화제 자원활동가 '그린티어'", en: "17th Seoul Eco Film Festival — 'Green Tier' Volunteer" },
       period: "2020.07 · 1개월",
