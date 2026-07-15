@@ -53,7 +53,7 @@
       --pink: #FF6BA3;
       --grad: linear-gradient(110deg, #8B6DFF, #52E8CF 55%, #FF6BA3);
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-      --disp: clamp(56px, 9vw, 128px);
+      --disp: clamp(40px, min(9vw, 14.5vh), 128px);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -77,6 +77,52 @@
       0%,100% { transform: translate(0,0); } 20% { transform: translate(-2%,1%); }
       40% { transform: translate(1%,-2%); } 60% { transform: translate(-1%,2%); } 80% { transform: translate(2%,-1%); }
     }
+
+    /* ── 시네마틱 오프닝 (~1s) ──
+       비행기가 좌→우로 화면 중앙을 가로지르며 절개선을 긋고,
+       그 자리를 따라 화면이 상하 반으로 쪼개지며 열림 → 히어로 등장 */
+    #cine-top, #cine-bottom {
+      position: fixed; left: 0; right: 0; height: 50.5vh; background: #040210;
+      z-index: 300; pointer-events: none;
+    }
+    #cine-top { top: 0; animation: splitUp 0.8s 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    #cine-bottom { bottom: 0; animation: splitDown 0.8s 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    @keyframes splitUp { 55% { opacity: 1; } to { transform: translateY(-86%); opacity: 0; } }
+    @keyframes splitDown { 55% { opacity: 1; } to { transform: translateY(86%); opacity: 0; } }
+
+    /* 비행기 + 절개선: 비행기를 선의 오른쪽 끝에 물리적으로 고정 → 같은 요소라 절대 어긋나지 않음 */
+    #intro {
+      position: fixed; inset: 0; z-index: 310; pointer-events: none;
+      animation: introOut 0.5s 0.85s var(--ease-out) forwards;
+    }
+    @keyframes introOut { to { opacity: 0; visibility: hidden; } }
+    #intro .flight {
+      position: absolute; top: 50%; left: 0; height: 2.6px; width: 0;
+      transform: translateY(-50%); border-radius: 2px;
+      background: linear-gradient(90deg, #8B6DFF, #52E8CF 55%, #FF6BA3);
+      background-size: 100vw 100%; background-repeat: no-repeat; background-position: left center;
+      animation: fly 0.65s 0.1s linear forwards;
+    }
+    @keyframes fly { to { width: 100vw; } }
+    #intro .plane {
+      position: absolute; left: 100%; top: 50%; width: 42px; height: 42px;
+      transform: translate(-100%, -50%);
+    }
+    #intro .plane svg { display: block; width: 100%; height: 100%; }
+
+    .cine-zoom { animation: cineZoom 1.5s 0.9s var(--ease-out) both; }
+    @keyframes cineZoom { from { transform: scale(1.06); } to { transform: scale(1); } }
+    .hero-photo img { animation: photoRise 1.3s 1s var(--ease-out) backwards; }
+    @keyframes photoRise {
+      from { opacity: 0; transform: translateY(70px) scale(1.03); filter: blur(12px); }
+      to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    }
+    #cine-flash {
+      position: absolute; inset: 0; z-index: 5; pointer-events: none;
+      background: linear-gradient(105deg, transparent 42%, rgba(244,242,250,0.13) 50%, transparent 58%);
+      transform: translateX(-130%); animation: cineSweep 0.9s 1.3s ease forwards;
+    }
+    @keyframes cineSweep { to { transform: translateX(130%); } }
 
     /* ── 시네마틱 리빌 ── */
     .reveal {
@@ -192,6 +238,7 @@
       .split-2 { grid-template-columns: 1fr !important; }
       .sticky-col { position: static; }
       .hero-photo { width: min(72vw, 420px) !important; right: 50% !important; transform: translateX(50%) !important; opacity: 0.5 !important; }
+      .hero-photo .reveal { display: none !important; }
       .hero-copy { position: relative; z-index: 3; }
     }
     @media (max-width: 760px) {
@@ -203,13 +250,14 @@
       .next-row { grid-template-columns: 1fr !important; gap: 8px !important; padding: 24px 0 !important; }
       .intro-line { white-space: normal !important; }
       .cert-grid { grid-template-columns: 1fr 1fr !important; }
+      .cert-grid > * { min-width: 0; }
       .cta-wrap { flex-wrap: wrap !important; justify-content: center !important; }
       .footer-h { font-size: 15vw !important; }
       #glow { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .reveal, .hl-line > span, .grad-text, .orb, #grain { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
-      #grain { display: none; }
+      .reveal, .hl-line > span, .grad-text, .orb, #grain, .cine-zoom, .hero-photo img { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+      #grain, #cine-top, #cine-bottom, #cine-flash, #intro { display: none; }
     }
   </style>
 </head>
@@ -217,6 +265,18 @@
 <div id="progress"></div>
 <div id="glow"></div>
 <div id="grain"></div>
+<div id="cine-top"></div>
+<div id="cine-bottom"></div>
+<div id="intro">
+  <!-- 선(.flight)이 자라고, 비행기(.plane)는 그 오른쪽 끝에 붙어 함께 이동 -->
+  <div class="flight">
+    <span class="plane">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 21 L23 12 L2 3 L2 10 L17 12 L2 14 Z" fill="#F4F2FA" />
+      </svg>
+    </span>
+  </div>
+</div>
 
 <!-- ═══════════ Nav — 얇은 에디토리얼 바 ═══════════ -->
 <nav class="sec-pad" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 0 44px; height: 64px; border-bottom: 1px solid var(--line); background: rgba(10,8,23,0.6); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);">
@@ -229,12 +289,14 @@
     <a class="nav-hide" href="#projects" style="color: var(--sub); text-decoration: none;">프로젝트</a>
     <a class="nav-hide" href="#career" style="color: var(--sub); text-decoration: none;">경력</a>
     <a class="nav-hide" href="#more" style="color: var(--sub); text-decoration: none;">교육 · 활동</a>
-    <a class="btn-grad" href="mailto:as7688@naver.com" style="font-size: 13px; padding: 8px 20px;">연락하기</a>
+    <button type="button" class="btn-grad" onclick="document.getElementById('card-modal').style.display='flex'" style="font-size: 13px; padding: 8px 20px;">연락하기</button>
   </div>
 </nav>
 
 <!-- ═══════════ Hero — 포스터 컴포지션: 사진 위로 초대형 타이포가 겹침 ═══════════ -->
-<header style="position: relative; overflow: hidden; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end;">
+<div class="cine-zoom" style="min-height: 100vh; display: flex; flex-direction: column;">
+<header style="position: relative; overflow: hidden; flex: 1; display: flex; flex-direction: column; justify-content: flex-end;">
+  <div id="cine-flash"></div>
   <div class="orb" data-depth="0.18" style="width: 760px; height: 760px; left: -220px; top: -280px; background: radial-gradient(circle, rgba(139,109,255,0.4), transparent 62%); filter: blur(40px); animation: orbA 11s ease-in-out infinite;"></div>
   <div class="orb" data-depth="0.10" style="width: 680px; height: 680px; right: -200px; top: 60px; background: radial-gradient(circle, rgba(82,232,207,0.25), transparent 62%); filter: blur(42px); animation: orbB 13s ease-in-out infinite;"></div>
   <div class="orb" data-depth="0.26" style="width: 540px; height: 540px; left: 30%; top: 55%; background: radial-gradient(circle, rgba(255,107,163,0.15), transparent 62%); filter: blur(46px); animation: orbA 15s 2s ease-in-out infinite;"></div>
@@ -244,32 +306,32 @@
     <div style="position: absolute; width: 110%; aspect-ratio: 1; bottom: -14%; border-radius: 50%; background: radial-gradient(circle, rgba(139,109,255,0.4), rgba(82,232,207,0.12) 55%, transparent 70%); filter: blur(26px);"></div>
     <img src="assets/photo_nobg.png" alt="이근재 프로필 사진" style="position: relative; display: block; width: 100%; object-fit: contain; object-position: bottom; -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent 100%); mask-image: linear-gradient(180deg, #000 82%, transparent 100%);" />
     <!-- 플로팅 네임 태그 -->
-    <div class="reveal in-view" style="--rot: -4deg; transition-delay: 0.9s; position: absolute; bottom: 15%; left: -8%; background: rgba(10,8,23,0.72); border: 1px solid rgba(244,242,250,0.2); backdrop-filter: blur(12px); border-radius: 14px; padding: 12px 18px; display: flex; flex-direction: column; gap: 2px; transform: rotate(-4deg); animation: floatY 5s 1.6s ease-in-out infinite; z-index: 4;">
+    <div class="reveal in-view" style="--rot: -4deg; transition-delay: 1.8s; position: absolute; bottom: 15%; left: -8%; background: rgba(10,8,23,0.72); border: 1px solid rgba(244,242,250,0.2); backdrop-filter: blur(12px); border-radius: 14px; padding: 12px 18px; display: flex; flex-direction: column; gap: 2px; transform: rotate(-4deg); animation: floatY 5s 2.6s ease-in-out infinite; z-index: 4;">
       <span style="font-size: 14px; font-weight: 800; text-align: center;">이근재</span>
       <span style="font-size: 12.5px; font-weight: 700; color: var(--ink);">EHS · ESG Practitioner</span>
     </div>
   </div>
 
   <!-- 카피: 사진 위로 겹치는 초대형 타이포 -->
-  <div class="hero-copy sec-pad" style="position: relative; z-index: 2; padding: 150px 44px 0; max-width: 1560px; width: 100%; margin: 0 auto;">
-    <div class="reveal in-view" style="transition-delay: 0.05s; display: inline-flex; align-items: center; gap: 9px; background: rgba(244,242,250,0.12); border: 1px solid var(--line-strong); border-radius: 999px; padding: 9px 20px; font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: 34px;">
+  <div class="hero-copy sec-pad" style="position: relative; z-index: 2; padding: clamp(72px, 10vh, 90px) 44px 0; max-width: 1560px; width: 100%; margin: 0 auto;">
+    <div class="reveal in-view" style="transition-delay: 1.2s; display: inline-flex; align-items: center; gap: 9px; background: rgba(244,242,250,0.12); border: 1px solid var(--line-strong); border-radius: 999px; padding: 9px 20px; font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: clamp(12px, 3vh, 24px);">
       <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--mint); animation: blinkDot 1.6s infinite;"></span>
       <span><span class="grad-text" style="font-weight: 800;">새로운 팀</span>을 찾고 있습니다</span>
     </div>
     <h1 style="font-size: var(--disp); font-weight: 900; line-height: 1.02; letter-spacing: -0.05em; margin: 0; text-wrap: balance;">
-      <span class="hl-line"><span style="animation-delay: 0.12s;">문제가</span></span>
-      <span class="hl-line"><span style="animation-delay: 0.24s;">반복되지 않는</span></span>
-      <span class="hl-line"><span style="animation-delay: 0.36s;"><span class="grad-text">구조를 만듭니다</span><span style="color: var(--mint);">.</span></span></span>
+      <span class="hl-line"><span style="animation-delay: 1.25s;">문제가</span></span>
+      <span class="hl-line"><span style="animation-delay: 1.4s;">반복되지 않는</span></span>
+      <span class="hl-line"><span style="animation-delay: 1.55s;"><span class="grad-text">구조를 만듭니다</span><span style="color: var(--mint);">.</span></span></span>
     </h1>
-    <div class="reveal in-view" style="transition-delay: 0.55s; display: flex; gap: 12px; align-items: center; margin: 40px 0 0;">
+    <div class="reveal in-view" style="transition-delay: 1.6s; display: flex; gap: 12px; align-items: center; margin: clamp(12px, 3vh, 24px) 0 0;">
       <button type="button" class="btn-grad" onclick="document.getElementById('card-modal').style.display='flex'" style="font-size: 14.5px; padding: 15px 32px;">연락하기</button>
       <a class="btn-ghost" href="assets/이근재_이력서.pdf" download="이근재_이력서.pdf" style="display: flex; align-items: center; gap: 8px; font-size: 14.5px; padding: 15px 32px;">이력서 PDF ↓</a>
     </div>
   </div>
 
   <!-- 히어로 메타: 하단 에디토리얼 4열 -->
-  <div class="sec-pad" style="position: relative; z-index: 2; max-width: 1560px; width: 100%; margin: 64px auto 0; padding: 0 44px;">
-    <div class="hero-meta reveal in-view" style="transition-delay: 0.7s; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); padding: 20px 0 26px; gap: 18px;">
+  <div class="sec-pad" style="position: relative; z-index: 2; max-width: 1560px; width: 100%; margin: clamp(16px, 4vh, 32px) auto 0; padding: 0 44px;">
+    <div class="hero-meta reveal in-view" style="transition-delay: 1.7s; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); padding: clamp(10px, 2vh, 16px) 0 clamp(14px, 2.5vh, 20px); gap: 18px;">
       <div style="display: flex; flex-direction: column; gap: 4px;">
         <span style="font-size: 11px; letter-spacing: 0.2em; color: var(--faint); font-weight: 800;">ROLE</span>
         <span style="font-size: 14.5px; font-weight: 700;">EHS · ESG 실무자</span>
@@ -294,6 +356,20 @@
 <div style="border-top: 1px dashed rgba(244,242,250,0.22); border-bottom: 1px dashed rgba(244,242,250,0.22); overflow: hidden; padding: 22px 0; white-space: nowrap; position: relative; z-index: 2; background: rgba(244,242,250,0.02);">
   <div id="marquee" style="display: inline-flex; gap: 52px; animation: marquee 30s linear infinite; padding-right: 52px; align-items: baseline;"></div>
 </div>
+</div>
+<script>
+/* 히어로 리빌 재점화: in-view가 하드코딩돼 있어 트랜지션이 실제로 돌지 않던 것을,
+   클래스를 뗐다가 다음 프레임에 다시 붙여 인트로 타임라인(2.5s~)에 맞춰 페이드인시킨다 */
+(function () {
+  var els = document.querySelectorAll(".cine-zoom .reveal.in-view");
+  els.forEach(function (el) { el.classList.remove("in-view"); });
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      els.forEach(function (el) { el.classList.add("in-view"); });
+    });
+  });
+})();
+</script>
 
 <!-- ═══════════ ① 숫자 — 풀블리드 스탯 스트립 ═══════════ -->
 <section id="stats" style="border-bottom: 1px solid var(--line); position: relative; z-index: 2;">
