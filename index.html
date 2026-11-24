@@ -8,9 +8,9 @@
   <meta name="author" content="이근재" />
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="이근재 · Cleanroom Technician 지원" />
-  <meta property="og:description" content="연구실 점검 준비 · 측정값 검증 · 교대근무 가능" />
+  <meta property="og:description" content="연구실 점검 준비 · 데이터 검증 · 교대근무 가능" />
   <meta property="og:locale" content="ko_KR" />
-  <meta property="og:image" content="assets/photo_nobg.png" />
+  <meta property="og:image" content="https://leegeunjae97.github.io/cleanroom/assets/photo_nobg.png" />
   <link rel="icon" href="assets/photo_nobg.png" type="image/png" />
   <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
@@ -162,6 +162,7 @@
 
     /* 자격·학력 */
     .info { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; align-items: start; }
+    .info > *, .row > * { min-width: 0; } /* 긴 단어가 패널을 밀어 모바일 가로 스크롤 생기던 것 방지 */
     .panel { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
     .panel + .panel { margin-top: 14px; }
     .panel-h { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: .16em; color: var(--green); margin-bottom: 8px; }
