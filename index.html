@@ -72,8 +72,12 @@
     .hero > .hero-grid { flex: 1; width: 100%; } /* 첫 화면 = 브라우저 높이, 티커까지 한 화면. 간격·글자·사진이 화면 높이(vh)에도 맞춰 줄어듦 */
     .hero-grid { position: relative; display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: end; }
     .hero-copy { padding-bottom: clamp(24px, 5vh, 72px); align-self: center; }
-    .tag { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; color: var(--dsub); }
-    .tag b { font-weight: 500; color: var(--dtext); }
+    .tag { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; color: var(--dsub); }
+    /* 이름 블록: 한글 이름을 키우고, 영문 대문자 이름은 모노 서체·자간으로 — 하단 Log sheet와 같은 글꼴 */
+    .tag .who { display: inline-flex; align-items: baseline; gap: 10px; }
+    .tag b { font-size: 18px; font-weight: 600; letter-spacing: -.01em; color: var(--dtext); }
+    .tag .en { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; color: var(--dsub); }
+    .tag .role { padding-left: 14px; border-left: 1px solid rgba(233,238,235,.16); line-height: 1.2; }
     .dot { flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(61,220,151,.16); animation: pulse 2s infinite; }
     @keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(61,220,151,.04); } }
     h1 { font-size: clamp(34px, min(5.2vw, 8.4vh), 96px); line-height: 1.12; letter-spacing: -.03em; font-weight: 600; margin: clamp(12px, 2.4vh, 24px) 0 0; }
@@ -81,15 +85,14 @@
     .lead { color: var(--dsub); font-size: clamp(15px, 1.1vw, 20px); line-height: 1.65; max-width: 40em; margin: clamp(12px, 2.4vh, 24px) 0 0; }
     .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: clamp(16px, 3.2vh, 32px); }
     /* 시그니처: Log Sheet 기록 줄 (항목 · 값, 점선 구분) — 히어로 조건과 연락처 카드에서만 */
-    .facts { margin: clamp(16px, 3.2vh, 32px) 0 0; padding: 0; list-style: none; max-width: 40em; border-top: 1px dashed var(--dline); }
+    .facts { margin: clamp(16px, 3.2vh, 32px) 0 0; padding: 0; list-style: none; max-width: 30em; /* 점선은 글자 길이만큼만 — 커진 사진과 간섭 방지 */ border-top: 1px dashed var(--dline); }
     .facts li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: clamp(8px, 1.4vh, 12px) 0; border-bottom: 1px dashed var(--dline); font-size: 14px; }
     .facts span { font-size: 13px; color: var(--dmute); }
     .hero-photo { position: relative; align-self: end; display: flex; justify-content: center; }
-    .hero-photo img { width: min(132%, 42.24vw, 792px, calc((100svh - 124px - clamp(16px, 4vh, 56px)) * .87)); /* 기존 대비 10% 확대, 단 nav~티커 사이 높이를 넘지 않게(사진 비율 700:805) */ display: block; -webkit-mask-image: linear-gradient(180deg,#000 82%,transparent); mask-image: linear-gradient(180deg,#000 82%,transparent); }
-    .name-card { position: absolute; left: 50%; bottom: clamp(16px, 3vh, 32px); transform: translateX(-50%); display: flex; align-items: baseline; gap: 12px;
-      white-space: nowrap; padding-top: 10px; border-top: 1px dashed rgba(233,238,235,.16); }
-    .name-card b { font-size: 16px; font-weight: 600; }
-    .name-card span { font-family: var(--mono); font-size: 12px; color: var(--dmute); }
+    .hero-photo img { width: var(--pw); margin-left: calc((100% - var(--pw)) / 2); /* 칸 중앙에 두고 양옆으로 커짐 (사진 비율 700:805) */ display: block; -webkit-mask-image: linear-gradient(180deg,#000 90%,transparent); mask-image: linear-gradient(180deg,#000 90%,transparent); }
+    /* 사진 폭(--pw): 칸의 165%·50.6vw·871px·화면 높이 기준값 중 가장 작은 값 (직전 대비 10% 확대). 사진 위 6.9%는 투명 여백이라 머리는 내비 아래에 옴 */
+    .photo-frame { position: relative; --pw: min(165%, 50.6vw, 871px, calc((100svh - 124px - clamp(16px, 4vh, 56px)) * .957));
+      margin-top: min(0px, calc(100svh - 124px - clamp(16px, 4vh, 56px) - var(--pw) * 1.15)); } /* 남는 높이보다 큰 만큼 위로 올림 → 티커는 첫 화면 유지, 사진 위 투명 여백만 내비 밑으로 */
 
     /* ticker */
     .ticker { position: relative; background: var(--dark2); border-top: 1px solid var(--dline); color: var(--dsub); overflow: hidden; white-space: nowrap; padding: 16px 0; }
@@ -273,6 +276,7 @@
       .hero { padding-top: calc(60px + clamp(16px, 4vh, 40px)); }
       .hero-copy { padding-bottom: clamp(24px, 4vh, 48px); }
       .tag { font-size: 13px; }
+      .tag .role { border-left: 0; flex-basis: 100%; padding-left: 20px; } /* 모바일: 직무 설명은 이름 아래 줄로 (점 6px + 간격 14px 만큼 들여 맞춤) */
       .sec-h { grid-template-columns: 1fr; gap: 4px; }
       .sec-h p { grid-column: 1; }
       .ways { grid-template-columns: 1fr; }
@@ -330,7 +334,7 @@
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="tag"><span class="dot"></span><span><b>ESG · ESH</b> · 환경 · 안전보건 · ESG 데이터</span></p>
+      <p class="tag"><span class="dot"></span><span class="who"><b>이근재</b><span class="en">GEUNJAE LEE</span></span><span class="role">ESG · ESH · 환경 · 안전보건 · ESG 데이터</span></p>
       <h1>환경·안전 데이터는<br />근거와 대조하고,<br /><em>현장에서 확인합니다</em></h1>
       <p class="lead">1,400개 회원사의 환경 법정 신고 데이터를 검증하고 재활용 사업장 55개소를 점검했으며, 법정 보건관리자로 연구소 안전보건 실무를 맡았습니다. 환경·안전보건 데이터와 법적 의무 이행을 근거 자료로 관리하겠습니다.</p>
       <div class="cta">
@@ -342,11 +346,12 @@
       </ul>
     </div>
     <div class="hero-photo">
-      <picture>
-        <source srcset="assets/photo_nobg.webp" type="image/webp" />
-        <img src="assets/photo_nobg.png" alt="이근재 프로필 사진" />
-      </picture>
-      <div class="name-card"><b>이근재</b><span>Geunjae Lee</span></div>
+      <div class="photo-frame">
+        <picture>
+          <source srcset="assets/photo_nobg.webp?v=4" type="image/webp" />
+          <img src="assets/photo_nobg.png?v=4" alt="이근재 프로필 사진" />
+        </picture>
+      </div>
     </div>
   </div>
   <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
@@ -412,7 +417,7 @@
         <div class="log-h"><span>Log sheet</span><span>2026.11</span></div>
         <dl>
           <dt>지원</dt><dd>ESG · ESH (환경 · 안전보건 · ESG 데이터)</dd>
-          <dt>이름</dt><dd>이근재 · Geunjae Lee</dd>
+          <dt>이름</dt><dd>이근재 · GEUNJAE LEE</dd>
           <dt>근무 조건</dt><dd>해외 출장 가능 · 자차 보유</dd>
           <dt>이메일</dt><dd><a href="mailto:as7688@naver.com">as7688@naver.com</a></dd>
           <dt>연락처</dt><dd><button type="button" class="reveal" data-tel="4741-6855-010" aria-expanded="false">눌러서 확인</button></dd>
@@ -423,7 +428,7 @@
         </div>
       </div>
     </div>
-    <div class="foot-meta"><span>이근재 · Geunjae Lee</span><span>ESG · ESH · 2026</span></div>
+    <div class="foot-meta"><span>이근재 · GEUNJAE LEE</span><span>ESG · ESH · 2026</span></div>
   </div>
 </footer>
 
