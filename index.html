@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이근재 · ESG / ESH 온라인 이력서</title>
+  <meta name="description" content="환경·안전보건·ESG 데이터 실무 3년 2개월. 1,400개 회원사 환경 법정 신고 데이터 검증, 재활용 사업장 55개소 ESH 현장점검, 법정 보건관리자 경험을 정리한 이근재의 온라인 이력서." />
+  <meta name="author" content="이근재" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="이근재 · ESG / ESH 온라인 이력서" />
+  <meta property="og:description" content="데이터 검증 · ESH 현장점검 · 법정 보건관리자" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://leegeunjae97.github.io/assets/photo_nobg.png" />
+  <link rel="icon" href="assets/photo_nobg.png" type="image/png" />
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "Person",
+    "name": "이근재", "alternateName": "Geunjae Lee",
+    "email": "mailto:as7688@naver.com",
+    "image": "assets/photo_nobg.png", "jobTitle": "ESG · ESH",
+    "knowsAbout": ["ESH Compliance Inspection","Lab Safety Inspection","Chemical Safety","Occupational Health","Data Cross-Verification","ESG Data","ISO 45001","Excel","Generative AI (Claude Code)"],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "명지대학교", "department": "환경에너지공학과" }
+  }
+  </script>
+  <style>
+    /* 이력서 PDF와 같은 디자인 언어 — 그린블랙 + 민트. unslop 패스: 장식(그라디언트·빛 번짐·점 격자)을 걷고 민트는 핵심 문구에만.
+       화면 크기 대응(--wrap, h1 clamp, 사진 폭)과 모션은 기존 값 유지. unslop by Damir Sokolovsky (@heydamir), CC BY 4.0 */
+    :root {
+      --ink: #121815; --sub: #4A5550; --faint: #6B7570; --line: rgba(18,24,21,.09); --bg: #F6F8F7; --card: #FFFFFF; --raised: #EEF2F0;
+      --dark: #0E1412; --dark2: #141B18; --dark3: #1C2420; --dtext: #E9EEEB; --dsub: #A3ADA8; --dmute: #84908A; --dline: rgba(233,238,235,.08);
+      --mint: #3DDC97; --green: #0B7A48;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease: cubic-bezier(.16,1,.3,1);
+      --wrap: clamp(1200px, 88vw, 1680px); --gut: clamp(16px, 4vw, 40px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Pretendard, system-ui, sans-serif; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-wrap: break-word; overflow-x: hidden; }
+    a { color: inherit; }
+    ::selection { background: rgba(61,220,151,.3); }
+    :focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
+    time { font-variant-numeric: tabular-nums; }
+    svg.i { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* nav */
+    .nav { position: fixed; inset: 0 0 auto; z-index: 50; height: 60px; display: flex; align-items: center;
+      background: var(--dark); border-bottom: 1px solid var(--dline); color: var(--dtext); }
+    .nav .wrap { width: 100%; display: flex; align-items: center; gap: 24px; }
+    .brand { font-weight: 600; font-size: 16px; text-decoration: none; display: flex; align-items: baseline; gap: 12px; }
+    .brand small { font-size: 13px; font-weight: 400; color: var(--dmute); }
+    .nav-links { margin-left: auto; display: flex; gap: 24px; font-size: 14px; }
+    .nav-links a { text-decoration: none; color: var(--dsub); transition: color .2s; }
+    .nav-links a:hover { color: var(--dtext); }
+    .btn { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; border-radius: 10px; border: 1px solid transparent;
+      font-weight: 500; font-size: 15px; text-decoration: none; transition: transform .15s var(--ease), background-color .15s, border-color .15s, color .15s; }
+    .btn:active { transform: scale(.98); }
+    .btn-mint { background: var(--dtext); color: var(--dark); box-shadow: inset 0 1px 0 rgba(255,255,255,.4); }
+    .btn-mint:hover { background: #fff; }
+    .btn-line { background: var(--dark3); border-color: var(--dline); color: var(--dtext); }
+    .btn-line:hover { border-color: rgba(233,238,235,.2); }
+    .nav .btn { height: 32px; padding: 0 12px; font-size: 13px; border-radius: 8px; }
+
+    /* hero */
+    .hero { position: relative; background: var(--dark); color: var(--dtext); overflow: hidden; padding: calc(60px + clamp(16px, 4vh, 56px)) 0 0; min-height: 100svh; display: flex; flex-direction: column; }
+    .hero > .hero-grid { flex: 1; width: 100%; } /* 첫 화면 = 브라우저 높이, 티커까지 한 화면. 간격·글자·사진이 화면 높이(vh)에도 맞춰 줄어듦 */
+    .hero-grid { position: relative; display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: end; }
+    .hero-copy { padding-bottom: clamp(24px, 5vh, 72px); align-self: center; }
+    .tag { display: inline-flex; align-items: center; gap: 12px; font-size: 14px; color: var(--dsub); }
+    .tag b { font-weight: 500; color: var(--dtext); }
+    .dot { flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(61,220,151,.16); animation: pulse 2s infinite; }
+    @keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(61,220,151,.04); } }
+    h1 { font-size: clamp(34px, min(5.2vw, 8.4vh), 96px); line-height: 1.12; letter-spacing: -.03em; font-weight: 600; margin: clamp(12px, 2.4vh, 24px) 0 0; }
+    h1 em { font-style: normal; color: var(--mint); }
+    .lead { color: var(--dsub); font-size: clamp(15px, 1.1vw, 20px); line-height: 1.65; max-width: 40em; margin: clamp(12px, 2.4vh, 24px) 0 0; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: clamp(16px, 3.2vh, 32px); }
+    /* 시그니처: Log Sheet 기록 줄 (항목 · 값, 점선 구분) — 히어로 조건과 연락처 카드에서만 */
+    .facts { margin: clamp(16px, 3.2vh, 32px) 0 0; padding: 0; list-style: none; max-width: 40em; border-top: 1px dashed var(--dline); }
+    .facts li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: clamp(8px, 1.4vh, 12px) 0; border-bottom: 1px dashed var(--dline); font-size: 14px; }
+    .facts span { font-size: 13px; color: var(--dmute); }
+    .hero-photo { position: relative; align-self: end; display: flex; justify-content: center; }
+    .hero-photo img { width: min(132%, 42.24vw, 792px, calc((100svh - 124px - clamp(16px, 4vh, 56px)) * .87)); /* 기존 대비 10% 확대, 단 nav~티커 사이 높이를 넘지 않게(사진 비율 700:805) */ display: block; -webkit-mask-image: linear-gradient(180deg,#000 82%,transparent); mask-image: linear-gradient(180deg,#000 82%,transparent); }
+    .name-card { position: absolute; left: 50%; bottom: clamp(16px, 3vh, 32px); transform: translateX(-50%); display: flex; align-items: baseline; gap: 12px;
+      white-space: nowrap; padding-top: 10px; border-top: 1px dashed rgba(233,238,235,.16); }
+    .name-card b { font-size: 16px; font-weight: 600; }
+    .name-card span { font-family: var(--mono); font-size: 12px; color: var(--dmute); }
+
+    /* ticker */
+    .ticker { position: relative; background: var(--dark2); border-top: 1px solid var(--dline); color: var(--dsub); overflow: hidden; white-space: nowrap; padding: 16px 0; }
+    .ticker-track { display: inline-flex; gap: 32px; padding-right: 32px; animation: marquee 36s linear infinite; font-weight: 400; font-size: 15px; }
+    .ticker b { color: var(--dtext); font-weight: 600; }
+    .ticker i { align-self: center; width: 1px; height: 12px; background: var(--dline); }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* section */
+    section.blk { padding: 112px 0 0; }
+    .sec-h { display: grid; grid-template-columns: 48px 1fr auto; align-items: baseline; gap: 16px; margin-bottom: 32px; }
+    .sec-h .no { font-family: var(--mono); font-size: 13px; color: var(--faint); }
+    .sec-h h2 { margin: 0; font-size: clamp(32px, 3.2vw, 48px); font-weight: 600; letter-spacing: -.02em; line-height: 1.2; }
+    .sec-h p { margin: 0; color: var(--faint); font-size: 14px; }
+
+    /* 일하는 방식 */
+    .ways { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+    .way { grid-column: span 2; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; transition: border-color .3s, box-shadow .4s, opacity .9s var(--ease); }
+    .way:nth-child(4), .way:nth-child(5) { grid-column: span 3; }
+    .way:hover { border-color: rgba(11,122,72,.3); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .badge { font-family: var(--mono); font-size: 13px; color: var(--faint); }
+    .way h3 { margin: 12px 0 8px; font-size: 19px; font-weight: 600; letter-spacing: -.01em; line-height: 1.4; }
+    .way p { margin: 0; color: var(--sub); font-size: 15px; line-height: 1.7; }
+
+    /* 경험 (네이티브 details) */
+    .exps { display: flex; flex-direction: column; gap: 12px; }
+    details.exp { background: var(--card); border: 1px solid var(--line); border-radius: 16px; transition: border-color .3s, box-shadow .4s, opacity .9s var(--ease), transform .9s var(--ease); }
+    details.exp:hover, details.exp[open] { border-color: rgba(11,122,72,.3); }
+    details.exp[open] { box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    details.exp summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 48px 1fr 32px; gap: 16px; align-items: center; padding: 20px 24px; border-radius: 16px; }
+    details.exp summary::-webkit-details-marker { display: none; }
+    details.exp summary:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+    .exp .num { font-family: var(--mono); font-size: 16px; color: var(--green); }
+    .exp h3 { margin: 0; font-size: clamp(17px, 1.4vw, 20px); font-weight: 600; letter-spacing: -.01em; line-height: 1.4; }
+    .exp .meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 4px; font-size: 13px; color: var(--faint); }
+    .chip { font-size: 13px; font-weight: 500; color: var(--sub); }
+    .chip::after { content: "·"; margin-left: 8px; color: var(--faint); font-weight: 400; }
+    .plus { width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; color: var(--faint); transition: transform .3s var(--ease), background-color .2s; }
+    .plus::before { content: ""; width: 8px; height: 8px; margin-top: -4px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
+    details.exp summary:hover .plus { background: var(--raised); }
+    details[open] .plus { transform: rotate(180deg); }
+    .exp-body { padding: 0 24px 24px 88px; }
+    .exp-body ul, .grp ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .exp-body ul { max-width: 820px; }
+    .exp-body li, .grp li { position: relative; padding-left: 16px; color: var(--sub); font-size: 15px; line-height: 1.7; }
+    .exp-body li::before, .grp li::before { content: ""; position: absolute; left: 0; top: .85em; width: 6px; height: 1px; background: var(--faint); }
+    .exp-body li:first-child { color: var(--ink); font-weight: 500; }
+
+    /* 경력 타임라인 */
+    .tl { position: relative; padding-left: 32px; }
+    .tl::before { content: ""; position: absolute; left: 7px; top: 32px; bottom: 32px; width: 1px; background: var(--line); }
+    .job { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+    .job::before { content: ""; position: absolute; box-sizing: border-box; left: -32px; top: 32px; width: 15px; height: 15px; border-radius: 50%; background: var(--bg); border: 2px solid var(--green); }
+    .job-h { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .job-h h3 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -.02em; }
+    .job-h span { color: var(--sub); font-size: 15px; }
+    .job-h time { margin-left: auto; font-size: 13px; color: var(--faint); }
+    .job-note { color: var(--faint); font-size: 14px; margin-top: 4px; }
+    .groups { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .grp { background: var(--bg); border-radius: 8px; padding: 20px; }
+    .grp h4 { margin: 0 0 12px; font-size: 15px; font-weight: 600; }
+    .grp li { font-size: 14px; line-height: 1.65; }
+    .res { display: grid; grid-template-columns: 32px 1fr; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 500; line-height: 1.6; }
+    .res::before { content: "성과"; font-size: 13px; font-weight: 500; color: var(--green); }
+
+    /* 자격·학력 */
+    .info { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; align-items: start; }
+    .info > *, .row > * { min-width: 0; } /* 긴 단어가 패널을 밀어 모바일 가로 스크롤 생기던 것 방지 */
+    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+    .panel + .panel { margin-top: 16px; }
+    .panel-h { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .sub-h { font-size: 13px; font-weight: 500; color: var(--faint); margin: 20px 0 0; }
+    .row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+    .row:last-child { border-bottom: none; }
+    .row b { font-weight: 500; font-size: 15px; }
+    .row small { display: block; color: var(--faint); font-size: 13px; margin-top: 2px; }
+    .row time { font-size: 13px; color: var(--faint); white-space: nowrap; }
+
+    /* 기여 방향 */
+    .why { background: var(--dark); color: var(--dtext); margin-top: 112px; padding: 112px 0; position: relative; overflow: hidden; }
+    .why .sec-h .no { color: var(--dmute); }
+    .why-grid { position: relative; display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; }
+    .why-lead { font-size: clamp(19px, 1.6vw, 24px); font-weight: 500; line-height: 1.6; letter-spacing: -.01em; margin: 0; }
+    .why-body p { color: var(--dsub); font-size: 16px; line-height: 1.85; margin: 0 0 20px; }
+    .nexts-h { position: relative; font-size: 16px; font-weight: 600; margin: 64px 0 16px; }
+    .nexts { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .next { border: 1px solid var(--dline); background: var(--dark2); border-radius: 16px; padding: 24px; transition: border-color .3s, opacity .9s var(--ease), transform .9s var(--ease); }
+    .next .badge { color: var(--dmute); }
+    .next h3 { margin: 12px 0 8px; font-size: 18px; font-weight: 600; }
+    .next p { margin: 0; color: var(--dsub); font-size: 15px; line-height: 1.7; }
+
+    /* footer */
+    footer { position: relative; overflow: hidden; background: #0B100E; color: var(--dtext); padding: clamp(80px, 10vw, 128px) 0 40px; border-top: 1px solid var(--dline); }
+    .foot-h { font-size: clamp(34px, 4.4vw, 64px); font-weight: 600; letter-spacing: -.03em; line-height: 1.15; margin: 0; }
+    .foot-h em { font-style: normal; color: var(--mint); }
+    .foot-grid { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+    .foot-no { display: block; font-size: 13px; color: var(--dmute); margin-bottom: 16px; }
+    .foot-lead { color: var(--dsub); font-size: clamp(15px, 1.1vw, 18px); line-height: 1.75; max-width: 40em; margin: 24px 0 0; }
+    .foot-steps { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--dline); }
+    .foot-steps li { padding: 20px 20px 0 0; }
+    .foot-steps li + li { padding-left: 20px; border-left: 1px solid var(--dline); }
+    .foot-steps b { display: block; font-size: clamp(26px, 2.4vw, 36px); font-weight: 500; letter-spacing: -.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+    .foot-steps span { display: block; margin-top: 8px; font-weight: 500; font-size: 16px; }
+    .foot-steps small { display: block; margin-top: 4px; color: var(--dmute); font-size: 13px; line-height: 1.5; }
+    .log { background: var(--dark2); border: 1px solid var(--dline); border-radius: 16px; padding: 24px; font-size: 15px; }
+    .log-h { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; color: var(--dmute); padding-bottom: 12px; border-bottom: 1px dashed var(--dline); }
+    .log-h span:first-child { color: var(--dsub); }
+    .log dl { margin: 0; display: grid; grid-template-columns: 96px 1fr; }
+    .log dt, .log dd { padding: 12px 0; border-bottom: 1px dashed var(--dline); }
+    .log dt { font-size: 13px; line-height: 24px; color: var(--dmute); }
+    .log dd { margin: 0; font-weight: 500; }
+    .log dd a { text-underline-offset: 4px; text-decoration-color: var(--dmute); transition: color .2s; }
+    .log dd a:hover { color: var(--mint); }
+    .reveal { height: 28px; margin: -2px 0; padding: 0 12px; border-radius: 8px; border: 1px solid var(--dline); background: var(--dark3); color: var(--dtext);
+      font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; transition: border-color .2s, color .2s; }
+    .reveal:hover { border-color: rgba(233,238,235,.2); color: var(--mint); }
+    .log dd a + .reveal { margin-left: 12px; }
+    .log .cta { margin-top: 24px; }
+    @media (max-width: 960px) { .foot-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .foot-steps { grid-template-columns: 1fr; } .foot-steps li + li { padding-left: 0; border-left: 0; border-top: 1px solid var(--dline); } .log { padding: 20px; } .facts li, .log dl { grid-template-columns: 80px 1fr; } }
+    .foot-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--dline); font-size: 13px; color: var(--dmute); }
+
+    /* 스크롤 리빌 — JS가 .js를 붙였을 때만 숨김 (실패해도 콘텐츠는 보임) */
+    /* 모션은 포인트에만 — ① 첫 화면 등장(로드 1회) ② 기여 방향 핵심 문장 ③ 하단 연락 문구.
+       나머지 본문은 움직이지 않음(전부 움직이면 어지럽고 강조가 사라짐). 모두 1회만. */
+    /* 오프닝: 종이비행기가 화면 중앙에 민트 선을 긋고 → 그 선을 따라 화면이 위아래로 열림 (세션 첫 방문만, ~1.5s)
+       --intro: 오프닝이 재생될 때 히어로 등장을 그만큼 늦춤 */
+    :root { --intro: 0s; }
+    html[data-intro="play"] { --intro: .95s; }
+    #cine-top, #cine-bottom, #intro { display: none; }
+    html[data-intro="play"] #cine-top, html[data-intro="play"] #cine-bottom, html[data-intro="play"] #intro { display: block; }
+    #cine-top, #cine-bottom { position: fixed; left: 0; right: 0; height: 50.5vh; background: var(--dark2); z-index: 300; pointer-events: none; }
+    #cine-top { top: 0; animation: splitUp .8s .9s cubic-bezier(.22,1,.36,1) forwards; }
+    #cine-bottom { bottom: 0; animation: splitDown .8s .9s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes splitUp { 55% { opacity: 1; } to { transform: translateY(-86%); opacity: 0; visibility: hidden; } }
+    @keyframes splitDown { 55% { opacity: 1; } to { transform: translateY(86%); opacity: 0; visibility: hidden; } }
+    #intro { position: fixed; inset: 0; z-index: 310; pointer-events: none; animation: introOut .5s .85s var(--ease) forwards; }
+    @keyframes introOut { to { opacity: 0; visibility: hidden; } }
+    /* 비행기를 선의 오른쪽 끝에 붙여 함께 이동 → 어긋나지 않음 */
+    #intro .flight { position: absolute; top: 50%; left: 0; width: 0; height: 2px; transform: translateY(-50%); border-radius: 2px;
+      background: linear-gradient(90deg, rgba(61,220,151,0), var(--mint) 40%, #A6F4CF); box-shadow: 0 0 12px rgba(61,220,151,.6);
+      animation: fly .65s .1s linear forwards; }
+    @keyframes fly { to { width: 100vw; } }
+    #intro .plane { position: absolute; left: 100%; top: 50%; width: 34px; height: 34px; transform: translate(-100%, -50%); filter: drop-shadow(0 0 8px rgba(61,220,151,.55)); }
+    #intro .plane svg { display: block; width: 100%; height: 100%; }
+
+    .hero-copy > *, .hero-photo { animation: rise .9s var(--ease) both; animation-delay: var(--intro); }
+    .hero-copy > :nth-child(2) { animation-delay: calc(var(--intro) + .1s); }
+    .hero-copy > :nth-child(3) { animation-delay: calc(var(--intro) + .22s); }
+    .hero-copy > :nth-child(n+4) { animation-delay: calc(var(--intro) + .34s); }
+    .hero-photo { animation-name: fade; animation-duration: 1.4s; animation-delay: calc(var(--intro) + .2s); }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+    @keyframes fade { from { opacity: 0; } }
+    .js .rv { opacity: 0; transform: translateY(14px); transition: opacity 1s ease-out, transform 1s var(--ease); }
+    .js .rv.in { opacity: 1; transform: none; }
+    /* 카드 호버 — 움직이지 않고 테두리·그림자만 */
+    .job, .panel { transition: border-color .3s, box-shadow .4s; }
+    .job:hover, .panel:hover { border-color: rgba(11,122,72,.3); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .next:hover { border-color: rgba(233,238,235,.2); }
+    /* 스크롤 진행 바 — 지원 브라우저만(CSS scroll-timeline), 미지원이면 안 보임 */
+    @supports (animation-timeline: scroll()) {
+      .nav::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--mint);
+        transform-origin: 0 50%; transform: scaleX(0); animation: progress linear both; animation-timeline: scroll(root); }
+      @keyframes progress { to { transform: scaleX(1); } }
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid, .why-grid, .info { grid-template-columns: 1fr; }
+      .hero-photo { display: none; }
+      .ways { grid-template-columns: 1fr 1fr; }
+      .way, .way:nth-child(4) { grid-column: span 1; }
+      .way:nth-child(5) { grid-column: span 2; }
+      .groups, .nexts { grid-template-columns: 1fr; }
+      .sec-h { grid-template-columns: 48px 1fr; }
+      .sec-h p { grid-column: 2; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .brand small { display: none; }
+      .nav .wrap { justify-content: space-between; }
+      .hero { padding-top: calc(60px + clamp(16px, 4vh, 40px)); }
+      .hero-copy { padding-bottom: clamp(24px, 4vh, 48px); }
+      .tag { font-size: 13px; }
+      .sec-h { grid-template-columns: 1fr; gap: 4px; }
+      .sec-h p { grid-column: 1; }
+      .ways { grid-template-columns: 1fr; }
+      .way:nth-child(5) { grid-column: span 1; }
+      details.exp summary { grid-template-columns: 1fr 32px; padding: 20px; }
+      .exp .num { display: none; }
+      .exp-body { padding: 0 20px 20px; }
+      .tl { padding-left: 24px; }
+      .tl::before { left: 7px; }
+      .job { padding: 20px; }
+      .job::before { left: -24px; top: 28px; }
+      .job-h time { margin-left: 0; width: 100%; }
+      section.blk { padding-top: 80px; }
+      .why { margin-top: 80px; padding: 80px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .js .rv { opacity: 1; transform: none; filter: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  document.documentElement.classList.add("js");
+  // 오프닝은 세션 첫 방문 + 동작 줄이기 꺼진 경우만
+  try {
+    if (!sessionStorage.getItem("introSeen") && !matchMedia("(prefers-reduced-motion: reduce)").matches)
+      document.documentElement.setAttribute("data-intro", "play");
+    sessionStorage.setItem("introSeen", "1");
+  } catch (e) {} // 저장소 막힌 환경이면 오프닝 없이 바로 표시
+</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+</svg>
+<div id="cine-top"></div>
+<div id="cine-bottom"></div>
+<div id="intro" aria-hidden="true">
+  <div class="flight"><span class="plane">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21 L23 12 L2 3 L2 10 L17 12 L2 14 Z" fill="#E9FFF5" /></svg>
+  </span></div>
+</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">이근재 <small>ESG · ESH</small></a>
+    <div class="nav-links">
+      <a href="#exp">경험</a><a href="#career">경력</a><a href="#info">자격·학력</a><a href="#about">일하는 방식</a><a href="#why">기여 방향</a>
+    </div>
+    <a class="btn btn-mint" href="mailto:as7688@naver.com">연락하기</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="tag"><span class="dot"></span><span><b>ESG · ESH</b> · 환경 · 안전보건 · ESG 데이터</span></p>
+      <h1>환경·안전 데이터는<br />근거와 대조하고,<br /><em>현장에서 확인합니다</em></h1>
+      <p class="lead">1,400개 회원사의 환경 법정 신고 데이터를 검증하고 재활용 사업장 55개소를 점검했으며, 법정 보건관리자로 연구소 안전보건 실무를 맡았습니다. 환경·안전보건 데이터와 법적 의무 이행을 근거 자료로 관리하겠습니다.</p>
+      <div class="cta">
+        <a class="btn btn-mint" href="assets/Lee-Geunjae-resume.pdf" download="Lee-Geunjae-resume.pdf"><svg class="i"><use href="#i-download"/></svg>이력서 PDF</a>
+      </div>
+      <ul class="facts">
+        <li><span>근무 조건</span>해외 출장 가능 · 자차 보유</li>
+        <li><span>도구</span>Microsoft Office · 생성형 AI(Claude Code)</li>
+      </ul>
+    </div>
+    <div class="hero-photo">
+      <picture>
+        <source srcset="assets/photo_nobg.webp" type="image/webp" />
+        <img src="assets/photo_nobg.png" alt="이근재 프로필 사진" />
+      </picture>
+      <div class="name-card"><b>이근재</b><span>Geunjae Lee</span></div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="blk" id="exp">
+      <div class="sec-h"><span class="no">01</span><h2>경험</h2><p>데이터 검증부터 현장 안전점검까지 5개 경험</p></div>
+      <div class="exps" id="exps"></div>
+    </section>
+
+    <section class="blk" id="career">
+      <div class="sec-h"><span class="no">02</span><h2>경력사항</h2></div>
+      <div class="tl" id="jobs"></div>
+    </section>
+
+    <section class="blk" id="info">
+      <div class="sec-h"><span class="no">03</span><h2>자격 · 학력 · 활동</h2></div>
+      <div class="info">
+        <div class="panel"><div class="panel-h">자격증</div><div id="certs"></div></div>
+        <div>
+          <div class="panel"><div class="panel-h">학력</div><div id="edu"></div></div>
+          <div class="panel"><div class="panel-h">교육 · 활동</div><div id="acts"></div></div>
+          <div class="panel"><div class="panel-h">아르바이트</div><div id="pt"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blk" id="about">
+      <div class="sec-h"><span class="no">04</span><h2>일하는 방식</h2><p>데이터 대조부터 현장 확인까지, 환경·안전보건 업무에서 지키는 다섯 가지 원칙</p></div>
+      <div class="ways" id="ways"></div>
+    </section>
+  </div>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="sec-h"><span class="no">05</span><h2>기여 방향</h2></div>
+      <div class="why-grid">
+        <p class="why-lead rv" id="why-lead"></p>
+        <div class="why-body" id="why-body"></div>
+      </div>
+      <div class="nexts-h">입사 후 할 일</div>
+      <div class="nexts" id="nexts"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-copy rv">
+        <span class="foot-no">06 · 연락처</span>
+        <p class="foot-h">환경과 안전의 기록을<br /><em>함께 쌓겠습니다</em></p>
+        <p class="foot-lead">숫자는 근거와 대조하고 현장은 직접 확인하는 습관으로, 환경·안전보건 데이터와 법적 의무 이행을 관리하겠습니다.</p>
+        <ol class="foot-steps" aria-label="요약">
+          <li><b>3년 2개월</b><span>환경·안전보건 실무</span><small>법정 보건관리자 · 1,400개사 법정 신고 데이터 검증</small></li>
+          <li><b>0%</b><span>정산 오차</span><small>외부 감사 불일치 지적 0건(2년 연속)</small></li>
+          <li><b>55개소</b><span>ESH 현장점검</span><small>반기별 컴플라이언스 진단</small></li>
+        </ol>
+      </div>
+      <div class="log" aria-label="연락처">
+        <div class="log-h"><span>Log sheet</span><span>2026.11</span></div>
+        <dl>
+          <dt>지원</dt><dd>ESG · ESH (환경 · 안전보건 · ESG 데이터)</dd>
+          <dt>이름</dt><dd>이근재 · Geunjae Lee</dd>
+          <dt>근무 조건</dt><dd>해외 출장 가능 · 자차 보유</dd>
+          <dt>이메일</dt><dd><a href="mailto:as7688@naver.com">as7688@naver.com</a></dd>
+          <dt>연락처</dt><dd><button type="button" class="reveal" data-tel="4741-6855-010" aria-expanded="false">눌러서 확인</button></dd>
+        </dl>
+        <div class="cta">
+          <a class="btn btn-mint" href="mailto:as7688@naver.com"><svg class="i"><use href="#i-mail"/></svg>메일 보내기</a>
+          <a class="btn btn-line" href="assets/Lee-Geunjae-resume.pdf" download="Lee-Geunjae-resume.pdf"><svg class="i"><use href="#i-download"/></svg>이력서 PDF</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-meta"><span>이근재 · Geunjae Lee</span><span>ESG · ESH · 2026</span></div>
+  </div>
+</footer>
+
+<noscript><p style="padding:24px;text-align:center;">일부 내용은 JavaScript가 필요합니다. 이력서 PDF를 내려받아 주세요.</p></noscript>
+<script src="data/resume.js?v=14"></script>
+<script src="js/render.js?v=16"></script>
+</body>
+</html>
