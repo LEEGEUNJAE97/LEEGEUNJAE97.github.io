@@ -91,7 +91,7 @@
     .hero-photo { position: relative; align-self: end; display: flex; justify-content: center; }
     .hero-photo img { width: var(--pw); margin-left: calc((100% - var(--pw)) / 2); /* 칸 중앙에 두고 양옆으로 커짐 (사진 비율 700:805) */ display: block; -webkit-mask-image: linear-gradient(180deg,#000 90%,transparent); mask-image: linear-gradient(180deg,#000 90%,transparent); }
     /* 사진 폭(--pw): 칸의 165%·50.6vw·871px·화면 높이 기준값 중 가장 작은 값 (직전 대비 10% 확대). 사진 위 6.9%는 투명 여백이라 머리는 내비 아래에 옴 */
-    .photo-frame { position: relative; --pw: min(165%, 50.6vw, 871px, calc((100svh - 124px - clamp(16px, 4vh, 56px)) * .957));
+    .photo-frame { position: relative; --pw: min(151.8%, 46.55vw, 801px, calc((100svh - 124px - clamp(16px, 4vh, 56px)) * .88)); /* 직전 대비 8% 축소(×0.92) */
       margin-top: min(0px, calc(100svh - 124px - clamp(16px, 4vh, 56px) - var(--pw) * 1.15)); } /* 남는 높이보다 큰 만큼 위로 올림 → 티커는 첫 화면 유지, 사진 위 투명 여백만 내비 밑으로 */
 
     /* ticker */
