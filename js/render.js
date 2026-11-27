@@ -25,8 +25,9 @@
 
   put("jobs", (D.experience || []).map(function (e) {
     var groups = (e.groups || []).map(function (g) {
-      return '<div class="grp"><h4>' + h(k(g.label)) + "</h4><ul>" +
-        (g.duties || []).map(function (d) { return "<li>" + h(k(d)) + "</li>"; }).join("") + "</ul>" +
+      // 성과는 details 밖: 닫혀 있어도 보이고, 열면 세부 업무 아래에 위치
+      return '<div class="grp"><details><summary><h4>' + h(k(g.label)) + '</h4><span class="plus" aria-hidden="true"></span></summary><ul>' +
+        (g.duties || []).map(function (d) { return "<li>" + h(k(d)) + "</li>"; }).join("") + "</ul></details>" +
         (g.results || []).map(function (r) { return '<div class="res">' + h(k(r)) + "</div>"; }).join("") + "</div>";
     }).join("");
     return '<article class="job"><div class="job-h"><h3>' + h(k(e.company)) + "</h3><span>" + h(k(e.title)) + "</span><time>" + h(e.period) + "</time></div>" +
